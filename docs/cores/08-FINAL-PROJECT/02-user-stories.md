@@ -1,7 +1,7 @@
 # User Stories — GenAI Knowledge Assistant
 
 > **Mục tiêu:** Biến tầm nhìn sản phẩm thành 5 kịch bản người dùng cụ thể, mỗi kịch bản được phân tích kỹ: acceptance ngầm (những điều phải đúng mà người dùng không nói ra), API/endpoint gợi ý để triển khai, và cách test để biết story đã xong.
-> Nguồn mở rộng từ: [08-FINAL-PROJECT.md](../../../08-FINAL-PROJECT.md)
+> Nguồn mở rộng từ: [08-FINAL-PROJECT](README.md)
 
 ---
 

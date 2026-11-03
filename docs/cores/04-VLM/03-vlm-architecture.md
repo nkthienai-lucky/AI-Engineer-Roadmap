@@ -1,7 +1,7 @@
 # Kiến trúc VLM & Các model nhẹ đáng biết (Tuần 13)
 
 > **Mục tiêu:** Hiểu kiến trúc VLM hiện đại gồm ba khối — vision encoder + projector + LLM decoder — và luồng dữ liệu qua từng khối; nắm đặc điểm 4 model nhẹ đáng biết (**SmolVLM2** 2.2B, **Qwen2.5-VL** 3B/7B, LLaVA, MiniCPM-V); hiểu **giới hạn thật sự** của VLM (đếm đối tượng, đọc chữ nhỏ, hiểu không gian) và nguyên nhân đằng sau.
-> Nguồn mở rộng từ: [04-VLM.md](../../../04-VLM.md)
+> Nguồn mở rộng từ: [04-VLM](README.md)
 
 ---
 

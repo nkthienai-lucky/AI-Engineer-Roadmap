@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: hiểu vì sao chat với LLM qua Cloudflare hay gặp lỗi **524** và cách cấu hình streaming/nginx để không bao giờ trúng (AUDIT C), cùng ngân sách RAM thực tế của cây 12GB và các quy tắc giữ Ollama không bị OOM kill — lỗi #1 với LLM trên VPS nhỏ (AUDIT D).
 >
-> Nguồn mở rộng từ: [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md)
+> Nguồn mở rộng từ: [07-DEPLOYMENT](README.md)
 
 ---
 

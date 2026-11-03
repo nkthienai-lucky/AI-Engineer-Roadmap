@@ -1,7 +1,7 @@
 # LoRA, QLoRA & Quantization — Tuần 6
 
 > **Mục tiêu:** Hiểu tại sao fine-tune model lớn với GPU nhỏ nhờ LoRA/QLoRA (ma trận hạng thấp, tham số train thêm), demo khái niệm; quantization INT8/INT4, khác nhau giữa GGUF/GPTQ/AWQ, tại sao model 3B chạy được trên CPU.
-> Nguồn mở rộng từ: [02-LLM-INTERNALS.md](../../../02-LLM-INTERNALS.md)
+> Nguồn mở rộng từ: [02-LLM-INTERNALS](README.md)
 
 ---
 

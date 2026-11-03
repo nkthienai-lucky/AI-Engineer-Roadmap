@@ -1,13 +1,13 @@
 # Project GĐ4 — "Trợ lý ảnh"
 
 > **Mục tiêu:** Spec đầy đủ cho project giai đoạn 4 — app "Trợ lý ảnh" với 2 lựa chọn (A: VQA upload ảnh hỏi đáp; B: trích xuất tài liệu ảnh → JSON cấu trúc), yêu cầu chung, Definition of Done và checklist nghiệm thu.
-> Nguồn mở rộng từ: [04-VLM.md](../../../04-VLM.md)
+> Nguồn mở rộng từ: [04-VLM](README.md)
 
 ---
 
 ## Tổng quan
 
-**Đầu ra:** app VLM chạy local + demo public (HF Spaces). Project này chứng minh bạn **dùng được VLM như một kỹ sư** — không chỉ gọi API mà còn so sánh model, biết giới hạn, deploy được. Đây là mảnh ghép cuối trước khi GĐ5 ([05-AGENTS-PRODUCTION.md](../../../05-AGENTS-PRODUCTION.md)) ghép tất cả thành sản phẩm.
+**Đầu ra:** app VLM chạy local + demo public (HF Spaces). Project này chứng minh bạn **dùng được VLM như một kỹ sư** — không chỉ gọi API mà còn so sánh model, biết giới hạn, deploy được. Đây là mảnh ghép cuối trước khi GĐ5 ([05-AGENTS-PRODUCTION](../05-AGENTS-PRODUCTION/README.md)) ghép tất cả thành sản phẩm.
 
 ## 2 lựa chọn (chọn 1)
 

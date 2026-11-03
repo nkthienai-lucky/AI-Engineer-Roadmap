@@ -1,7 +1,7 @@
 # CLIP & Visual Tokens — Cầu nối Vision ↔ Language
 
 > **Mục tiêu:** Hiểu CLIP huấn luyện contrastive learning ảnh-text thế nào (đối sánh ảnh–mô tả trong không gian chung), dùng CLIP cho zero-shot classification, và khái niệm "visual tokens" — cách biến ảnh thành chuỗi token để ghép thẳng vào LLM.
-> Nguồn mở rộng từ: [04-VLM.md](../../../04-VLM.md)
+> Nguồn mở rộng từ: [04-VLM](README.md)
 
 ---
 

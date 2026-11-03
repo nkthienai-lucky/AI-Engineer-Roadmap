@@ -18,13 +18,13 @@
 
 | Giai đoạn | Tuần | Chủ đề | Project đầu ra | Tài liệu |
 |---|---|---|---|---|
-| 1. Nền tảng | 1–3 | Python/API, GenAI overview, prompting | Chatbot CLI | [01-FOUNDATIONS.md](01-FOUNDATIONS.md) |
-| 2. Bản chất LLM | 4–7 | Transformer, attention, tokenizer, fine-tuning | Mini-GPT train từ đầu | [02-LLM-INTERNALS.md](02-LLM-INTERNALS.md) |
-| 3. RAG | 8–11 | Chunking, embedding, vector DB, rerank, **eval** | Docs-QA có trích dẫn | [03-RAG.md](03-RAG.md) |
-| 4. VLM | 12–14 | CLIP, ViT, multimodal, VLM nhẹ | Hỏi đáp ảnh (SmolVLM) | [04-VLM.md](04-VLM.md) |
-| 5. Agents & Production | 15–18 | Tool calling, agent, guardrails, observability | **Capstone: sản phẩm cuối** | [05-AGENTS-PRODUCTION.md](05-AGENTS-PRODUCTION.md) |
+| 1. Nền tảng | 1–3 | Python/API, GenAI overview, prompting | Chatbot CLI | [01-FOUNDATIONS](docs/cores/01-FOUNDATIONS/README.md) |
+| 2. Bản chất LLM | 4–7 | Transformer, attention, tokenizer, fine-tuning | Mini-GPT train từ đầu | [02-LLM-INTERNALS](docs/cores/02-LLM-INTERNALS/README.md) |
+| 3. RAG | 8–11 | Chunking, embedding, vector DB, rerank, **eval** | Docs-QA có trích dẫn | [03-RAG](docs/cores/03-RAG/README.md) |
+| 4. VLM | 12–14 | CLIP, ViT, multimodal, VLM nhẹ | Hỏi đáp ảnh (SmolVLM) | [04-VLM](docs/cores/04-VLM/README.md) |
+| 5. Agents & Production | 15–18 | Tool calling, agent, guardrails, observability | **Capstone: sản phẩm cuối** | [05-AGENTS-PRODUCTION](docs/cores/05-AGENTS-PRODUCTION/README.md) |
 
-Song song suốt lộ trình: **deploy từng project lên web** (xem [07-DEPLOYMENT.md](07-DEPLOYMENT.md)).
+Song song suốt lộ trình: **deploy từng project lên web** (xem [07-DEPLOYMENT](docs/cores/07-DEPLOYMENT/README.md)).
 
 ---
 
@@ -32,14 +32,14 @@ Song song suốt lộ trình: **deploy từng project lên web** (xem [07-DEPLOY
 
 | File | Nội dung |
 |---|---|
-| [01-FOUNDATIONS.md](01-FOUNDATIONS.md) | Giai đoạn 1 — Nền tảng GenAI & prompting |
-| [02-LLM-INTERNALS.md](02-LLM-INTERNALS.md) | Giai đoạn 2 — Transformer, attention, training |
-| [03-RAG.md](03-RAG.md) | Giai đoạn 3 — RAG end-to-end + evaluation |
-| [04-VLM.md](04-VLM.md) | Giai đoạn 4 — Vision-Language Models |
-| [05-AGENTS-PRODUCTION.md](05-AGENTS-PRODUCTION.md) | Giai đoạn 5 — Agents, guardrails, production |
-| [06-ECOSYSTEM.md](06-ECOSYSTEM.md) | Bảng tra nhanh: Vector DB, embedding, frameworks, free tiers |
-| [07-DEPLOYMENT.md](07-DEPLOYMENT.md) | Kiến trúc & checklist deploy 0đ (Oracle Always Free) |
-| [08-FINAL-PROJECT.md](08-FINAL-PROJECT.md) | **Spec sản phẩm cuối** — kiến trúc, milestones, tiêu chí nghiệm thu |
+| [01-FOUNDATIONS](docs/cores/01-FOUNDATIONS/README.md) | Giai đoạn 1 — Nền tảng GenAI & prompting |
+| [02-LLM-INTERNALS](docs/cores/02-LLM-INTERNALS/README.md) | Giai đoạn 2 — Transformer, attention, training |
+| [03-RAG](docs/cores/03-RAG/README.md) | Giai đoạn 3 — RAG end-to-end + evaluation |
+| [04-VLM](docs/cores/04-VLM/README.md) | Giai đoạn 4 — Vision-Language Models |
+| [05-AGENTS-PRODUCTION](docs/cores/05-AGENTS-PRODUCTION/README.md) | Giai đoạn 5 — Agents, guardrails, production |
+| [06-ECOSYSTEM](docs/cores/06-ECOSYSTEM/README.md) | Bảng tra nhanh: Vector DB, embedding, frameworks, free tiers |
+| [07-DEPLOYMENT](docs/cores/07-DEPLOYMENT/README.md) | Kiến trúc & checklist deploy 0đ (Oracle Always Free) |
+| [08-FINAL-PROJECT](docs/cores/08-FINAL-PROJECT/README.md) | **Spec sản phẩm cuối** — kiến trúc, milestones, tiêu chí nghiệm thu |
 
 ---
 
@@ -48,7 +48,7 @@ Song song suốt lộ trình: **deploy từng project lên web** (xem [07-DEPLOY
 1. **Học theo project, không học lan man.** Mỗi giai đoạn PHẢI có project chạy được. Không hoàn thành project = không qua giai đoạn.
 2. **Hiểu bản chất trước, dùng framework sau.** Xong GĐ2 phải tự code attention được bằng numpy/PyTorch; framework (LangChain...) chỉ là công cụ rút ngắn.
 3. **Eval là kỹ năng đắt giá nhất.** Người build RAG giỏi khác người build qua loa ở chỗ: đo lường được chất lượng. Tập đánh giá từ GĐ3.
-4. **Deploy ngay từ tuần 3.** Project không deploy = project chưa xong. Hạ tầng free đã có sẵn trong [07-DEPLOYMENT.md](07-DEPLOYMENT.md).
+4. **Deploy ngay từ tuần 3.** Project không deploy = project chưa xong. Hạ tầng free đã có sẵn trong [07-DEPLOYMENT](docs/cores/07-DEPLOYMENT/README.md).
 5. **Ghi chép công khai.** Mỗi project có README + demo link. Đây là portfolio khi đi xin việc/freelance.
 
 ## ✅ Định nghĩa "hoàn thành" lộ trình

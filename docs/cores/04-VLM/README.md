@@ -64,4 +64,4 @@
 ---
 
 ## 🔗 Chuyển tiếp
-Xong GĐ4 → bạn có đủ "vũ khí" (LLM + RAG + VLM). GĐ5 ([05-AGENTS-PRODUCTION.md](05-AGENTS-PRODUCTION.md)) ghép tất cả thành **sản phẩm**.
+Xong GĐ4 → bạn có đủ "vũ khí" (LLM + RAG + VLM). GĐ5 ([05-AGENTS-PRODUCTION](../05-AGENTS-PRODUCTION/README.md)) ghép tất cả thành **sản phẩm**.

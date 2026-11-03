@@ -1,7 +1,7 @@
 # Evaluation với Ragas (Tuần 11 — phần quan trọng nhất!)
 
 > **Mục tiêu:** Nắm định nghĩa trực quan từng metric (faithfulness, answer relevancy, context precision/recall), thành thạo framework **Ragas** (bắt buộc), biết DeepEval/TruLens như lựa chọn thay thế, xây eval dataset chất lượng (câu hỏi + ground truth), chạy vòng lặp eval → sửa pipeline → đo lại, và đọc khái niệm Agentic RAG / GraphRAG.
-> Nguồn mở rộng từ: [03-RAG.md](../../../03-RAG.md)
+> Nguồn mở rộng từ: [03-RAG](README.md)
 
 ---
 

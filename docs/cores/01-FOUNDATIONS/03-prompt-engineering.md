@@ -3,7 +3,7 @@
 > **Mục tiêu:** Thành thục 4 kỹ thuật prompt cốt lõi — zero-shot, few-shot, chain-of-thought, structured output (JSON mode) — hiểu vai trò system prompt, và viết được prompt theo 3 nguyên tắc: ngắn gọn, có role, có ví dụ output mẫu.
 > **Đầu ra:** Chọn được kỹ thuật phù hợp cho từng tác vụ và thấy rõ "trước/sau" khi áp dụng từng kỹ thuật.
 
-> Nguồn mở rộng từ: [01-FOUNDATIONS.md](../../../01-FOUNDATIONS.md)
+> Nguồn mở rộng từ: [01-FOUNDATIONS](README.md)
 
 ---
 

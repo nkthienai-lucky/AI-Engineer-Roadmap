@@ -1,7 +1,7 @@
 # Sau khi hoàn thành — hướng đi tiếp theo
 
 > **Mục tiêu:** Biết rõ việc gì làm **sau** khi capstone đã pass đủ 8 tiêu chí (auth, LoRA, GPU, benchmark), và thuộc lòng bảng "chốt" hướng đi cuối cùng — thứ quyết định bạn không lan man suốt 18 tuần và sau này.
-> Nguồn mở rộng từ: [08-FINAL-PROJECT.md](../../../08-FINAL-PROJECT.md)
+> Nguồn mở rộng từ: [08-FINAL-PROJECT](README.md)
 
 ---
 

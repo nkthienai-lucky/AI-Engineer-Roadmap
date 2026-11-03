@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: biết giá tham khảo và đặc điểm từng lựa chọn GPU/inference trả phí (Vast.ai, RunPod, Modal, SaladCloud) và nhận diện thời điểm nên nâng cấp từ free — bảng tra, không học thuộc.
 >
-> Nguồn mở rộng từ: [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md)
+> Nguồn mở rộng từ: [06-ECOSYSTEM](README.md)
 
 ---
 

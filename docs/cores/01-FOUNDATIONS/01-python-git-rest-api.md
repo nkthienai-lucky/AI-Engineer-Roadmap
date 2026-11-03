@@ -3,7 +3,7 @@
 > **Mục tiêu:** Nắm vững công cụ kỹ thuật cơ bản trước khi chạm vào GenAI: viết Python thành thạo (function, class, async/await, virtualenv/uv), dùng Git để quản lý code (commit, branch, PR), hiểu REST/JSON và gọi được API từ Python bằng `requests`/`httpx`.
 > **Đầu ra:** Gọi được một API bất kỳ từ Python, in kết quả JSON; quản lý code bằng Git không sợ mất code.
 
-> Nguồn mở rộng từ: [01-FOUNDATIONS.md](../../../01-FOUNDATIONS.md)
+> Nguồn mở rộng từ: [01-FOUNDATIONS](README.md)
 
 ---
 

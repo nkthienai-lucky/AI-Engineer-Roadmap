@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: hiểu toàn bộ kiến trúc deploy một sản phẩm GenAI hoàn chỉnh (domain + DB + model) với chi phí 0đ, biết vai trò từng thành phần trong stack và hiểu **tại sao** cả stack chạy vừa trong 12GB RAM với model ≤3B quantized — nền tảng để đọc các file "bẫy" phía sau.
 >
-> Nguồn mở rộng từ: [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md)
+> Nguồn mở rộng từ: [07-DEPLOYMENT](README.md)
 
 ---
 

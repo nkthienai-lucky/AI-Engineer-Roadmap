@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: hiểu cross-encoder khác gì retrieval bằng embedding, khi nào đáng thêm bước rerank, và chọn tool rerank phù hợp (không học thuộc).
 >
-> Nguồn mở rộng từ: [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md)
+> Nguồn mở rộng từ: [06-ECOSYSTEM](README.md)
 
 ---
 
@@ -47,6 +47,6 @@
 
 ## Liên kết
 
-- [04-rag-pipeline-tools.md](04-rag-pipeline-tools.md) — rerank nằm giữa retrieval và generation trong pipeline RAG (xem thêm [03-RAG.md](../../../03-RAG.md)).
+- [04-rag-pipeline-tools.md](04-rag-pipeline-tools.md) — rerank nằm giữa retrieval và generation trong pipeline RAG (xem thêm [03-RAG](../03-RAG/README.md)).
 - [01-vector-db.md](01-vector-db.md) — bước retrieval top-k trước khi rerank.
 - [02-embedding-models.md](02-embedding-models.md) — bi-encoder dùng cho bước retrieval đối chiếu với cross-encoder ở đây.

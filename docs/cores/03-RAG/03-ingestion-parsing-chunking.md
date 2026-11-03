@@ -1,7 +1,7 @@
 # Ingestion, Parsing & Chunking (Tuần 9 — nửa quan trọng nhất!)
 
 > **Mục tiêu:** Biết parse tài liệu PDF/Word/HTML bằng `Docling` / `Unstructured` (vì sao PDF lộn xộn khó parse), nắm các chiến lược chunking (fixed-size, overlap, semantic, theo heading) với ví dụ chunk 512 overlap 64, hiểu vai trò của metadata (nguồn, trang, thời gian) trong filter + trích dẫn, và thuộc lòng indexing pipeline: document → chunk → embed → store.
-> Nguồn mở rộng từ: [03-RAG.md](../../../03-RAG.md)
+> Nguồn mở rộng từ: [03-RAG](README.md)
 
 ---
 

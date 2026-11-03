@@ -2,7 +2,7 @@
 
 > **Mục tiêu:** Đưa toàn bộ stack từ "chạy được trên máy dev" lên production thật: Docker hóa, deploy Oracle Always Free, CI/CD GitHub Actions, load test nhẹ, tối ưu hiệu năng (KV cache, batching, caching semantic), và hoàn thiện README + demo video cho portfolio. Project GĐ5 = **capstone** — sản phẩm cuối của cả lộ trình.
 >
-> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION.md](../../../05-AGENTS-PRODUCTION.md)
+> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION](README.md)
 
 ---
 

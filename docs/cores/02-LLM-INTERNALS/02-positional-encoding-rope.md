@@ -1,7 +1,7 @@
 # Positional Encoding & RoPE — Tuần 4
 
 > **Mục tiêu:** Hiểu tại sao transformer bắt buộc cần positional encoding (attention bất biến với thứ tự), phân biệt absolute / sinusoidal / learned, và hiểu intuition của RoPE (xoay vector theo vị trí, ý tưởng tương đối).
-> Nguồn mở rộng từ: [02-LLM-INTERNALS.md](../../../02-LLM-INTERNALS.md)
+> Nguồn mở rộng từ: [02-LLM-INTERNALS](README.md)
 
 ---
 

@@ -1,7 +1,7 @@
 # Tầm nhìn & Scope — GenAI Knowledge Assistant
 
 > **Mục tiêu:** Hiểu rõ sản phẩm capstone "GenAI Knowledge Assistant" là gì, tại sao chọn đúng tầm nhìn này (vừa là sản phẩm thật vừa là công cụ học), và đặc biệt — tại sao giữ scope chặt lại là yếu tố quyết định dự án có hoàn thành hay không.
-> Nguồn mở rộng từ: [08-FINAL-PROJECT.md](../../../08-FINAL-PROJECT.md)
+> Nguồn mở rộng từ: [08-FINAL-PROJECT](README.md)
 
 ---
 

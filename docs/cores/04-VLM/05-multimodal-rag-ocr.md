@@ -1,7 +1,7 @@
 # Multimodal RAG & Trích xuất tài liệu ảnh (Tuần 14)
 
 > **Mục tiêu:** Hiểu multimodal RAG — index cả ảnh + text bằng embedding chung không gian; pipeline trích xuất dữ liệu từ ảnh tài liệu (OCR + VLM) — cực kỳ thực tế cho doanh nghiệp (hóa đơn, biểu mẫu); và khái niệm fine-tune VLM nhẹ bằng LoRA (kèm demo Colab nếu có sức).
-> Nguồn mở rộng từ: [04-VLM.md](../../../04-VLM.md)
+> Nguồn mở rộng từ: [04-VLM](README.md)
 
 ---
 

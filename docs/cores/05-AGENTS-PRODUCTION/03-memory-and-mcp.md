@@ -2,7 +2,7 @@
 
 > **Mục tiêu:** Phân biệt memory ngắn hạn (context window) và memory dài hạn (vector store), hiểu cơ chế lưu/truy xuất của từng loại, và nắm khái niệm **MCP (Model Context Protocol)** — chuẩn kết nối tool mới mà mọi agent cần biết.
 >
-> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION.md](../../../05-AGENTS-PRODUCTION.md)
+> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION](README.md)
 
 ---
 

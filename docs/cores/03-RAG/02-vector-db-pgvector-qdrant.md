@@ -1,7 +1,7 @@
 # Vector DB: pgvector & Qdrant (Tuần 8)
 
 > **Mục tiêu:** Hiểu Vector DB là gì và tại sao cần nó thay vì quét toàn bộ dữ liệu, thành thạo **1 trong 2** — `pgvector` (khuyên dùng) hoặc `Qdrant` — kèm schema và truy vấn cơ bản, và biết vị trí của chúng trong bức tranh tổng quan hệ sinh thái.
-> Nguồn mở rộng từ: [03-RAG.md](../../../03-RAG.md)
+> Nguồn mở rộng từ: [03-RAG](README.md)
 
 ---
 
@@ -109,7 +109,7 @@ hits = client.query_points(
 | Filter metadata | WHERE SQL (mạnh, JOIN được) | Payload filter (linh hoạt, native) |
 | Khuyến nghị trong roadmap | ✅ **Khuyên dùng** | ✅ Khi cần performance chuyên dụng |
 
-Để tra nhanh bảng so sánh đầy đủ Vector DB / embedding / free tier, xem [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md) và mục Vector DB chi tiết tại [06-ECOSYSTEM/01-vector-db.md](../../cores/06-ECOSYSTEM/01-vector-db.md) — đó là tài liệu tham chiếu hệ sinh thái chính thức của bộ roadmap này.
+Để tra nhanh bảng so sánh đầy đủ Vector DB / embedding / free tier, xem [06-ECOSYSTEM](../06-ECOSYSTEM/README.md) và mục Vector DB chi tiết tại [06-ECOSYSTEM/01-vector-db.md](../06-ECOSYSTEM/01-vector-db.md) — đó là tài liệu tham chiếu hệ sinh thái chính thức của bộ roadmap này.
 
 ## Liên kết
 

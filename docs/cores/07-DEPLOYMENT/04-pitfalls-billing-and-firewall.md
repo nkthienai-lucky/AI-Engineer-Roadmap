@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: tránh bị charge oan khi dùng Oracle Always Free (AUDIT A — 6 bẫy billing kinh điển) và hiểu tại sao mở cổng trên Oracle luôn là "No route to host" cho đến khi mở ở **đủ 3 lớp firewall** (AUDIT B) — bao gồm đặc thù Oracle tắt UFW âm thầm và Docker bypass mọi rule iptables.
 >
-> Nguồn mở rộng từ: [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md)
+> Nguồn mở rộng từ: [07-DEPLOYMENT](README.md)
 
 > Tổng hợp các lỗi **thật sự xảy ra** với Oracle Always Free + Docker + LLM, đã xác minh từ tài liệu chính thức và trường hợp thực tế. Mỗi mục = một "bẫy". Đọc hết trước khi bật server.
 

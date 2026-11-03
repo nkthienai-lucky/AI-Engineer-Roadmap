@@ -1,7 +1,7 @@
 # Tài nguyên & Lỗi thường gặp (Tuần 8–11)
 
 > **Mục tiêu:** Tổng hợp tài nguyên học tập chính thức của GĐ3 (giữ nguyên link từ nguồn) và mở rộng 4 lỗi thường gặp — hiểu **tại sao** từng lỗi xảy ra và cách tránh cụ thể.
-> Nguồn mở rộng từ: [03-RAG.md](../../../03-RAG.md)
+> Nguồn mở rộng từ: [03-RAG](README.md)
 
 ---
 
@@ -14,7 +14,7 @@
 | **LlamaIndex docs** | Framework RAG (tham khảo khi build thật) | [docs.llamaindex.ai](https://docs.llamaindex.ai/) |
 | **Ragas docs** | Đánh giá RAG | [docs.ragas.io](https://docs.ragas.io/) |
 | **MTEB Leaderboard** | Chọn embedding model | [hf.co/spaces/mteb/leaderboard](https://huggingface.co/spaces/mteb/leaderboard) |
-| **Bảng so sánh Vector DB / embedding / free tier** | Tra nhanh | [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md) |
+| **Bảng so sánh Vector DB / embedding / free tier** | Tra nhanh | [06-ECOSYSTEM](../06-ECOSYSTEM/README.md) |
 
 **Cách dùng gợi ý (tự nghĩ, không phải link mới):**
 
@@ -23,15 +23,15 @@
 - **LlamaIndex docs:** khi build thật và muốn năng suất cao hơn viết tay — đọc **sau** V1 để biết framework giải quyết đúng những gì bạn đã tự làm.
 - **Ragas docs:** tài liệu chính cho [06 — Evaluation](06-evaluation-ragas.md) — metric definitions, cách build eval dataset, ví dụ code.
 - **MTEB Leaderboard:** chọn embedding model theo điểm Retrieval + hỗ trợ tiếng Việt (xem [01 — Embedding](01-embedding-and-vector-search.md)).
-- **Bảng so sánh Vector DB / embedding / free tier** trong [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md) — tra nhanh khi chọn pgvector/Qdrant và model.
+- **Bảng so sánh Vector DB / embedding / free tier** trong [06-ECOSYSTEM](../06-ECOSYSTEM/README.md) — tra nhanh khi chọn pgvector/Qdrant và model.
 
 ## Lộ trình học gợi ý theo tuần (tổng hợp từ nguồn)
 
 Gợi ý cách phân bổ tài nguyên cho từng tuần — sắp xếp từ nội dung Tuần 8–11 trong nguồn, không thêm tài liệu ngoài danh sách trên:
 
-| Tuần | Nội dung (từ [03-RAG.md](../../../03-RAG.md)) | Đọc trong folder này | Tài nguyên chính |
+| Tuần | Nội dung (từ [03-RAG](README.md)) | Đọc trong folder này | Tài nguyên chính |
 |---|---|---|---|
-| 8 | Embedding & Vector Search | [01](01-embedding-and-vector-search.md), [02](02-vector-db-pgvector-qdrant.md) | MTEB Leaderboard, [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md) |
+| 8 | Embedding & Vector Search | [01](01-embedding-and-vector-search.md), [02](02-vector-db-pgvector-qdrant.md) | MTEB Leaderboard, [06-ECOSYSTEM](../06-ECOSYSTEM/README.md) |
 | 9 | Ingestion & Chunking (nửa quan trọng nhất!) | [03](03-ingestion-parsing-chunking.md) | LangChain RAG From Scratch |
 | 10 | Retrieval & Generation | [04](04-retrieval-reranking-hybrid.md), [05](05-generation-citation-anti-hallucination.md) | DeepLearning.AI RAG courses |
 | 11 | **Evaluation** (quan trọng nhất!) | [06](06-evaluation-ragas.md), [07](07-project-docs-qa.md) | Ragas docs |

@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: lắp toàn bộ kiến trúc + bẫy đã học vào **1 buổi setup** với 8 bước đúng thứ tự (điều gì trước, điều gì sau, tại sao), và có bộ PRE-FLIGHT CHECKLIST 8 mục với cách kiểm tra cụ thể cho từng mục — xong hết mới được tuyên bố "live".
 >
-> Nguồn mở rộng từ: [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md)
+> Nguồn mở rộng từ: [07-DEPLOYMENT](README.md)
 
 ---
 
@@ -65,7 +65,7 @@ Lưu ý: bước 1 có thể kéo dài nếu region "out of capacity" (retry/đ�
 
 ## Chuyển tiếp
 
-Sản phẩm cuối cần deploy theo đúng checklist này → xem [08-FINAL-PROJECT.md](../../../08-FINAL-PROJECT.md).
+Sản phẩm cuối cần deploy theo đúng checklist này → xem [08-FINAL-PROJECT](../08-FINAL-PROJECT/README.md).
 
 ## Liên kết
 

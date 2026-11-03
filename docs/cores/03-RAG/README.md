@@ -44,7 +44,7 @@
 | **LlamaIndex docs** | Framework RAG (tham khảo khi build thật) | [docs.llamaindex.ai](https://docs.llamaindex.ai/) |
 | **Ragas docs** | Đánh giá RAG | [docs.ragas.io](https://docs.ragas.io/) |
 | **MTEB Leaderboard** | Chọn embedding model | [hf.co/spaces/mteb/leaderboard](https://huggingface.co/spaces/mteb/leaderboard) |
-| **Bảng so sánh Vector DB / embedding / free tier** | Tra nhanh | [06-ECOSYSTEM.md](06-ECOSYSTEM.md) |
+| **Bảng so sánh Vector DB / embedding / free tier** | Tra nhanh | [06-ECOSYSTEM](../06-ECOSYSTEM/README.md) |
 
 ---
 
@@ -74,4 +74,4 @@
 ---
 
 ## 🔗 Chuyển tiếp
-Xong GĐ3 → bạn có kỹ năng "hái ra tiền" nhất. GĐ4 ([04-VLM.md](04-VLM.md)) mở rộng sang ảnh — multimodal là xu hướng hiện tại.
+Xong GĐ3 → bạn có kỹ năng "hái ra tiền" nhất. GĐ4 ([04-VLM](../04-VLM/README.md)) mở rộng sang ảnh — multimodal là xu hướng hiện tại.

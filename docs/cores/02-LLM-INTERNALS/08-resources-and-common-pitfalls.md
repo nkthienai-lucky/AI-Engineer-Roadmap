@@ -1,7 +1,7 @@
 # Tài nguyên & Lỗi thường gặp — Tuần 4–7
 
 > **Mục tiêu:** Danh sách tài nguyên học theo đúng thứ tự (Karpathy Zero to Hero BẮT BUỘC kèm lịch xem), và 3 lỗi thường gặp được mở rộng: tại sao xem thụ động không hiểu thật, tại sao bỏ qua toán sẽ không debug được, tại sao đốt giai đoạn bị giới hạn sau này.
-> Nguồn mở rộng từ: [02-LLM-INTERNALS.md](../../../02-LLM-INTERNALS.md)
+> Nguồn mở rộng từ: [02-LLM-INTERNALS](README.md)
 
 ---
 
@@ -77,4 +77,4 @@ Học RAG/agent khi chưa hiểu tokenization, attention, context window sẽ ch
 - Đọc tuần 4–5 (bản chất): [01](01-tokenization-bpe-embedding.md) → [02](02-positional-encoding-rope.md) → [03](03-self-attention.md) → [04](04-transformer-architecture.md).
 - Đọc tuần 6 (training): [05](05-training-finetuning.md) → [06](06-lora-qlora-quantization.md).
 - Tuần 7 làm project theo [07](07-project-mini-gpt.md), trước khi phỏng vấn thì ôn lại checklist của file 07 + bảng dấu hiệu lỗi ở file này.
-- File gốc rút gọn: [02-LLM-INTERNALS.md](../../../02-LLM-INTERNALS.md).
+- File gốc rút gọn: [02-LLM-INTERNALS](README.md).

@@ -1,7 +1,7 @@
 # Project GĐ3 — "Docs-QA có trích dẫn + Eval"
 
 > **Mục tiêu:** Spec đầy đủ cho project giai đoạn 3 — Docs-QA app chat với PDF/website, **có trích dẫn nguồn** và **đánh giá chất lượng bằng số liệu**. Ba phiên bản tăng dần (V1 viết tay → V2 reranker + hybrid → V3 eval Ragas) + UI web + Definition of Done + checklist nghiệm thu.
-> Nguồn mở rộng từ: [03-RAG.md](../../../03-RAG.md)
+> Nguồn mở rộng từ: [03-RAG](README.md)
 
 ---
 

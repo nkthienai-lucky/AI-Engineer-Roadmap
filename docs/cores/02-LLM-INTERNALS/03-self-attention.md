@@ -1,7 +1,7 @@
 # Self-Attention — Tuần 5
 
 > **Mục tiêu:** Hiểu self-attention từng bước: Query, Key, Value, scaled dot-product attention (công thức + tại sao chia √d_k), tính toán bằng numpy/PyTorch, và tại sao attention là O(n²).
-> Nguồn mở rộng từ: [02-LLM-INTERNALS.md](../../../02-LLM-INTERNALS.md)
+> Nguồn mở rộng từ: [02-LLM-INTERNALS](README.md)
 
 ---
 

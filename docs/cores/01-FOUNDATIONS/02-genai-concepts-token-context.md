@@ -3,7 +3,7 @@
 > **Mục tiêu:** Hiểu bản chất LLM là gì, token là gì (và tại sao token ≠ từ), context window, temperature/top-p ảnh hưởng ra sao đến output; phân biệt 4 loại model (LLM / chat model / embedding model / VLM); nhận diện và đối phó với 3 ranh giới lớn: hallucination, cutoff kiến thức, không có bộ nhớ dài hạn.
 > **Đầu ra:** Giải thích được cho người khác "model sinh text như thế nào" và biết khi nào không nên tin model.
 
-> Nguồn mở rộng từ: [01-FOUNDATIONS.md](../../../01-FOUNDATIONS.md)
+> Nguồn mở rộng từ: [01-FOUNDATIONS](README.md)
 
 ---
 

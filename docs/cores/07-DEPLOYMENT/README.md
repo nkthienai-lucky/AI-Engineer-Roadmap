@@ -213,4 +213,4 @@ Quy tắc bắt buộc:
 ---
 
 ## 🔗 Chuyển tiếp
-Sản phẩm cuối cần deploy theo đúng checklist này → xem [08-FINAL-PROJECT.md](08-FINAL-PROJECT.md).
+Sản phẩm cuối cần deploy theo đúng checklist này → xem [08-FINAL-PROJECT](../08-FINAL-PROJECT/README.md).

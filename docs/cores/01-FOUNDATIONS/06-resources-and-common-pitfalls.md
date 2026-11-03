@@ -3,7 +3,7 @@
 > **Mục tiêu:** Biết dùng đúng 6 tài nguyên cốt lõi của GĐ1 (mỗi tài liệu để làm gì, đọc khi nào), và hiểu sâu 4 lỗi thường gặp của người mới — *vì sao* lỗi đó xảy ra và cách tránh cụ thể.
 > **Đầu ra:** Lộ trình đọc tài liệu không lan man + checklist phòng lỗi trước khi nộp project GĐ1.
 
-> Nguồn mở rộng từ: [01-FOUNDATIONS.md](../../../01-FOUNDATIONS.md)
+> Nguồn mở rộng từ: [01-FOUNDATIONS](README.md)
 
 ---
 

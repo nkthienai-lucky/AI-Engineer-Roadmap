@@ -1,7 +1,7 @@
 # Kiến trúc Transformer: Multi-Head, Residual, LayerNorm, KV Cache — Tuần 5
 
 > **Mục tiêu:** Hiểu vai trò của multi-head attention, residual connection, layer norm; phân biệt decoder-only (GPT) vs encoder-decoder (T5) và khi nào dùng cái nào; hiểu KV cache — cơ chế hoạt động, tại sao sinh token nhanh hơn, và memory của KV cache.
-> Nguồn mở rộng từ: [02-LLM-INTERNALS.md](../../../02-LLM-INTERNALS.md)
+> Nguồn mở rộng từ: [02-LLM-INTERNALS](README.md)
 
 ---
 

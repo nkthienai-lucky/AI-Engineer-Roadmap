@@ -1,7 +1,7 @@
 # Vision Foundation: CNN → ViT (Tuần 12)
 
 > **Mục tiêu:** Hiểu cách CNN "nhìn" ảnh bằng convolution — tại sao nó từng thống trị thị giác máy tính suốt hơn một thập kỷ, và vì sao Vision Transformer (ViT) thay thế: patch embedding (chia ảnh thành patch → token), [CLS] token, cùng bảng so sánh CNN vs ViT để biết khi nào dùng cái nào.
-> Nguồn mở rộng từ: [04-VLM.md](../../../04-VLM.md)
+> Nguồn mở rộng từ: [04-VLM](README.md)
 
 ---
 

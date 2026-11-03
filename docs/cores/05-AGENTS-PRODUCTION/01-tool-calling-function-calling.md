@@ -2,7 +2,7 @@
 
 > **Mục tiêu:** Hiểu tường tận cơ chế function/tool calling — cách một model "gọi hàm" mà thực ra chỉ sinh JSON — biết định nghĩa tool bằng JSON schema, thiết kế error handling khi tool fail, và viết được một flow gọi tool hoàn chỉnh bằng Python.
 >
-> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION.md](../../../05-AGENTS-PRODUCTION.md)
+> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION](README.md)
 
 ---
 

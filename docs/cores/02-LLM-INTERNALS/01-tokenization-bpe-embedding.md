@@ -1,7 +1,7 @@
 # Tokenization (BPE) & Embedding — Tuần 4
 
 > **Mục tiêu:** Hiểu BPE tokenizer hoạt động ra sao, tại sao "token ≠ từ", tự viết được tokenizer đơn giản, và hiểu embedding + cosine similarity là gì.
-> Nguồn mở rộng từ: [02-LLM-INTERNALS.md](../../../02-LLM-INTERNALS.md)
+> Nguồn mở rộng từ: [02-LLM-INTERNALS](README.md)
 
 ---
 

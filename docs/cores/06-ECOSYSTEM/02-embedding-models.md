@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: chọn model embedding cho RAG — hiểu cột "chất lượng"/"chạy CPU" đánh giá theo tiêu chí gì, và dùng MTEB Leaderboard để ra quyết định thay vì học thuộc bảng.
 >
-> Nguồn mở rộng từ: [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md)
+> Nguồn mở rộng từ: [06-ECOSYSTEM](README.md)
 
 ---
 

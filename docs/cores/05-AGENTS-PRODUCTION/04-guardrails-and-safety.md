@@ -2,7 +2,7 @@
 
 > **Mục tiêu:** Biết nhận diện và phòng chống prompt injection (qua RAG và qua user input), thiết kế output guardrails (schema validation, content filter), hiểu tại sao phải tách bạch "system prompt / dữ liệu / input user" trong RAG, và nắm các lớp bảo vệ vận hành: rate limit, auth, chi phí per-request.
 >
-> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION.md](../../../05-AGENTS-PRODUCTION.md)
+> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION](README.md)
 
 ---
 

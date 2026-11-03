@@ -1,7 +1,7 @@
 # Tech Stack — chốt lại, không bàn thêm
 
 > **Mục tiêu:** Nắm bảng công nghệ đã chốt cho capstone, hiểu **tại sao** mỗi lựa chọn được chọn (trade-off so với phương án thay thế), và hiểu ranh giới: "chốt rồi, không bàn thêm" — mỗi lần cân nhắc đổi stack là một lần rời xa việc hoàn thành sản phẩm.
-> Nguồn mở rộng từ: [08-FINAL-PROJECT.md](../../../08-FINAL-PROJECT.md)
+> Nguồn mở rộng từ: [08-FINAL-PROJECT](README.md)
 
 ---
 
@@ -18,7 +18,7 @@
 | Vector DB | **PostgreSQL + pgvector** | 1 service duy nhất, free |
 | Parse | **Docling** | PDF lộn xộn → markdown |
 | Eval | **Ragas** | Faithfulness / recall |
-| Infra | Docker Compose trên Oracle VPS | Xem [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md) |
+| Infra | Docker Compose trên Oracle VPS | Xem [07-DEPLOYMENT](../07-DEPLOYMENT/README.md) |
 | Observability | **Langfuse Cloud free tier** + UptimeRobot | Self-host quá nặng với VPS 12GB (cần ClickHouse) — xem 06-ECOSYSTEM |
 
 ## Giải thích từng dòng — lý do & trade-off
@@ -51,12 +51,12 @@ PDF "lộn xộn" (bảng, cột, header/footer) → markdown sạch, giữ cấ
 Đo **faithfulness** (có bịa không) và **context recall** (retrieval có tìm đúng chunk không) bằng số liệu — biến "hình như RAG tốt hơn" thành "faithfulness tăng từ 0.72 lên 0.84". Đây là công cụ biến mục tiêu kỹ thuật "eval có số liệu" thành hiện thực. Xem chi tiết metric tại folder [03-RAG](../03-RAG/06-evaluation-ragas.md).
 
 ### Infra — Docker Compose trên Oracle VPS
-Compose biến cả cụm (nginx, FastAPI, Ollama, Postgres) thành 1 file `docker-compose.yml` — recreate được ở bất kỳ đâu, không "chạy được trên máy tôi". Chi tiết hạ tầng và cách deploy: [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md).
+Compose biến cả cụm (nginx, FastAPI, Ollama, Postgres) thành 1 file `docker-compose.yml` — recreate được ở bất kỳ đâu, không "chạy được trên máy tôi". Chi tiết hạ tầng và cách deploy: [07-DEPLOYMENT](../07-DEPLOYMENT/README.md).
 
 ### Observability — Langfuse Cloud free tier + UptimeRobot
 Langfuse trace từng request (prompt, context, latency, token) — trực tiếp nuôi US5. UptimeRobot ping định kỳ, cảnh báo khi site chết (điều kiện acceptance "7 ngày không crash").
 
-**Ghi chú quan trọng — tại sao KHÔNG self-host Langfuse:** bản self-host của Langfuse cần **ClickHouse** (cùng Postgres, Redis, worker…) — ClickHouse một mình nó đã ngốn nhiều GB RAM và CPU, cộng với Ollama (LLM + VLM + embed + rerank) trên VPS 12GB là kịch bản chắc chắn OOM. Langfuse Cloud free tier cho đủ số trace của 1 dự án cá nhân, không tốn RAM VPS. Nếu sau này muốn self-host (khi có VPS mạnh hơn), tham khảo mục observability trong [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md).
+**Ghi chú quan trọng — tại sao KHÔNG self-host Langfuse:** bản self-host của Langfuse cần **ClickHouse** (cùng Postgres, Redis, worker…) — ClickHouse một mình nó đã ngốn nhiều GB RAM và CPU, cộng với Ollama (LLM + VLM + embed + rerank) trên VPS 12GB là kịch bản chắc chắn OOM. Langfuse Cloud free tier cho đủ số trace của 1 dự án cá nhân, không tốn RAM VPS. Nếu sau này muốn self-host (khi có VPS mạnh hơn), tham khảo mục observability trong [06-ECOSYSTEM](../06-ECOSYSTEM/README.md).
 
 ## Quy tắc "chốt rồi, không bàn thêm"
 

@@ -1,7 +1,7 @@
 # Giai đoạn 5 — Agents & Production (Tuần 15–18)
 
 > **Mục tiêu:** Ghép mọi thứ thành sản phẩm hoàn chỉnh: agent có tool, an toàn, quan sát được, deploy production.
-> **Đầu ra:** **Sản phẩm cuối (capstone)** — xem spec chi tiết tại [08-FINAL-PROJECT.md](08-FINAL-PROJECT.md).
+> **Đầu ra:** **Sản phẩm cuối (capstone)** — xem spec chi tiết tại [08-FINAL-PROJECT](../08-FINAL-PROJECT/README.md).
 
 ---
 
@@ -48,7 +48,7 @@
 
 ## 🛠️ Project GĐ5 = Capstone
 
-Chính là **sản phẩm cuối** trong [08-FINAL-PROJECT.md](08-FINAL-PROJECT.md) — tổng hợp LLM + RAG + VLM + agent, deploy lên hạ tầng free hoàn toàn.
+Chính là **sản phẩm cuối** trong [08-FINAL-PROJECT](../08-FINAL-PROJECT/README.md) — tổng hợp LLM + RAG + VLM + agent, deploy lên hạ tầng free hoàn toàn.
 
 ---
 
@@ -61,4 +61,4 @@ Chính là **sản phẩm cuối** trong [08-FINAL-PROJECT.md](08-FINAL-PROJECT.
 ---
 
 ## 🔗 Chuyển tiếp
-Xong GĐ5 → hoàn thành lộ trình. Xem lại checklist "hoàn thành" ở [README.md](README.md).
+Xong GĐ5 → hoàn thành lộ trình. Xem lại checklist "hoàn thành" ở [README.md](../../../README.md).

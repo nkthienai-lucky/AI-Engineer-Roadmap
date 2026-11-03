@@ -2,7 +2,7 @@
 
 > **Mục tiêu:** Hiểu agent loop — vòng lặp "nghĩ → làm → quan sát" cho phép LLM giải quyết tác vụ nhiều bước; phân biệt planner và executor; và biết khi nào nên dùng framework **LangGraph** (agent có trạng thái) thay vì function-calling thuần.
 >
-> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION.md](../../../05-AGENTS-PRODUCTION.md)
+> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION](README.md)
 
 ---
 

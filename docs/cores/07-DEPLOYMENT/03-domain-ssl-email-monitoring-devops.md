@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: biết chọn đúng công cụ free cho 4 tầng phụ trợ của stack — domain + SSL/CDN (Mục 2), email transactional (Mục 3), giám sát & vận hành (Mục 4), DevOps/CI-CD (Mục 5) — kèm lý do tại sao mỗi lựa chọn là cần thiết và các con số hạn mức free phải nhớ.
 >
-> Nguồn mở rộng từ: [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md)
+> Nguồn mở rộng từ: [07-DEPLOYMENT](README.md)
 
 ---
 

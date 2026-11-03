@@ -1,7 +1,7 @@
 # Retrieval, Reranking & Hybrid Search (Tuần 10)
 
 > **Mục tiêu:** Hiểu Naive RAG và các cải thiện (query rewriting, HyDE, multi-query), hiểu vì sao cần reranking cross-encoder (`bge-reranker`) khi top-k retrieval ≠ top-k đúng (bi-encoder vs cross-encoder), và biết kết hợp BM25 + vector trong hybrid search với RRF fusion.
-> Nguồn mở rộng từ: [03-RAG.md](../../../03-RAG.md)
+> Nguồn mở rộng từ: [03-RAG](README.md)
 
 ---
 

@@ -1,7 +1,7 @@
 # Training & Fine-tuning LLM — Tuần 6
 
 > **Mục tiêu:** Phân biệt pretraining / fine-tuning / RLHF-DPO, hiểu pipeline 3 bước huấn luyện LLM hiện đại, loss cross-entropy với token tiếp theo, và ảnh hưởng của learning rate, batch size.
-> Nguồn mở rộng từ: [02-LLM-INTERNALS.md](../../../02-LLM-INTERNALS.md)
+> Nguồn mở rộng từ: [02-LLM-INTERNALS](README.md)
 
 ---
 

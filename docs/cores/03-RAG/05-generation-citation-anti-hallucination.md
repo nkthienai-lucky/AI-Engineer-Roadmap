@@ -1,7 +1,7 @@
 # Generation, Citation & Chống Hallucination (Tuần 10)
 
 > **Mục tiêu:** Biết sinh câu trả lời từ context kèm **trích dẫn nguồn** (citation format, vì sao bắt buộc), viết prompt chống hallucination ("chỉ trả lời dựa trên context") với mẫu cụ thể, và xử lý đúng khi context không đủ để trả lời.
-> Nguồn mở rộng từ: [03-RAG.md](../../../03-RAG.md)
+> Nguồn mở rộng từ: [03-RAG](README.md)
 
 ---
 

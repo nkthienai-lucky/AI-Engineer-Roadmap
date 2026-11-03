@@ -1,7 +1,7 @@
 # Kiến trúc & luồng xử lý — GenAI Knowledge Assistant
 
 > **Mục tiêu:** Đọc và hiểu được sơ đồ kiến trúc tổng thể (User → Cloudflare → Oracle VPS), hiểu tường tận từng bước của 2 luồng lõi — RAG (PDF → trả lời có citation) và VLM (ảnh → JSON) — bao gồm tham số cụ thể (chunk 512, overlap 64, top-20 → top-5) và lý do đằng sau mỗi lựa chọn.
-> Nguồn mở rộng từ: [08-FINAL-PROJECT.md](../../../08-FINAL-PROJECT.md)
+> Nguồn mở rộng từ: [08-FINAL-PROJECT](README.md)
 
 ---
 
@@ -37,7 +37,7 @@ User ──HTTPS──► Cloudflare ──►│  Oracle Always Free VPS (2CPU/
 - **bge-embed 0.6B + bge-reranker:** embedding model (văn bản → vector) và reranker (chấm lại độ liên quan) — hai mắt xích của retrieval, xem chi tiết bên dưới.
 - **Langfuse (optional):** trace từng request (prompt, context, latency, token) — "optional" vì hệ thống vẫn chạy được nếu không có, nhưng thiếu nó thì story 5 (log chi phí) phải tự build.
 
-Toàn bộ nằm trong **Oracle Always Free VPS (2CPU/12GB)** — chi phí 0đ, chi tiết deploy ở [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md).
+Toàn bộ nằm trong **Oracle Always Free VPS (2CPU/12GB)** — chi phí 0đ, chi tiết deploy ở [07-DEPLOYMENT](../07-DEPLOYMENT/README.md).
 
 ## Luồng RAG
 

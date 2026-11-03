@@ -1,7 +1,7 @@
 # Embedding & Vector Search (Tuần 8)
 
 > **Mục tiêu:** Hiểu embedding model hoạt động thế nào, biết cách chọn model theo MTEB / đa ngôn ngữ / tiếng Việt, nắm công thức và trường hợp dùng của cosine / dot product / L2, và có intuition về ANN (HNSW, IVF) — tại sao tìm "gần đúng" mà nhanh hơn nhiều so với tìm chính xác.
-> Nguồn mở rộng từ: [03-RAG.md](../../../03-RAG.md)
+> Nguồn mở rộng từ: [03-RAG](README.md)
 
 ---
 

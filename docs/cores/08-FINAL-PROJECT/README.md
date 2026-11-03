@@ -76,7 +76,7 @@ User ──HTTPS──► Cloudflare ──►│  Oracle Always Free VPS (2CPU/
 | Vector DB | **PostgreSQL + pgvector** | 1 service duy nhất, free |
 | Parse | **Docling** | PDF lộn xộn → markdown |
 | Eval | **Ragas** | Faithfulness / recall |
-| Infra | Docker Compose trên Oracle VPS | Xem [07-DEPLOYMENT.md](07-DEPLOYMENT.md) |
+| Infra | Docker Compose trên Oracle VPS | Xem [07-DEPLOYMENT](../07-DEPLOYMENT/README.md) |
 | Observability | **Langfuse Cloud free tier** + UptimeRobot | Self-host quá nặng với VPS 12GB (cần ClickHouse) — xem 06-ECOSYSTEM |
 
 ## 5. 📅 Milestones (ghép với lộ trình học)
@@ -107,7 +107,7 @@ User ──HTTPS──► Cloudflare ──►│  Oracle Always Free VPS (2CPU/
 |---|---|
 | Model 3B trả lời chậm trên 2 OCPU | Quantize Q4_K_M, giới hạn max_tokens, cache semantic cho câu lặp |
 | 12GB RAM không đủ (LLM + VLM + DB) | Tải VLM theo demand (unload khi không dùng); hoặc tách VLM sang 1 VPS AMD nhỏ |
-| Oracle "out of capacity" khi tạo VPS | Thử region Singapore/Osaka, thử lại nhiều lần; xem [07-DEPLOYMENT.md](07-DEPLOYMENT.md) |
+| Oracle "out of capacity" khi tạo VPS | Thử region Singapore/Osaka, thử lại nhiều lần; xem [07-DEPLOYMENT](../07-DEPLOYMENT/README.md) |
 | RAG trả lời sai/hallucination | Bắt buộc citation + guardrail "chỉ trả lời dựa trên context"; theo dõi feedback user (US4) |
 | Cloudflare cắt stream (524) khi model sinh lâu | SSE + keepalive ping 15–30s + giới hạn max_tokens — xem 07-DEPLOYMENT mục C |
 | OOM kill khi load cả LLM + VLM | OLLAMA_MAX_LOADED_MODELS=1, swap 4GB, unload VLM khi không dùng — xem 07-DEPLOYMENT mục D |
@@ -126,7 +126,7 @@ User ──HTTPS──► Cloudflare ──►│  Oracle Always Free VPS (2CPU/
 
 | | Quyết định |
 |---|---|
-| **Học** | 5 giai đoạn, 18 tuần, mỗi giai đoạn 1 project (xem [README.md](README.md)) |
+| **Học** | 5 giai đoạn, 18 tuần, mỗi giai đoạn 1 project (xem [README.md](../../../README.md)) |
 | **Cốt lõi phải giỏi** | Transformer (tự code), RAG + **Eval**, deploy production |
 | **Công cụ mặc định** | Ollama · pgvector · Qwen3-Embed · Ragas · FastAPI · Docker |
 | **Sản phẩm cuối** | GenAI Knowledge Assistant (chat + RAG + VLM), 4 milestone |

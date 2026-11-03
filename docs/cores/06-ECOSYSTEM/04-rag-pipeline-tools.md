@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: nắm vai trò từng mắt xích trong luồng RAG tổng thể (Parse → Chunking → Orchestration → Agent → Eval → Observability → Guardrails → Serving → Caching) và biết công cụ nào cho mắt xích nào — bảng tra, không học thuộc.
 >
-> Nguồn mở rộng từ: [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md)
+> Nguồn mở rộng từ: [06-ECOSYSTEM](README.md)
 
 ---
 
@@ -55,4 +55,4 @@
 - [01-vector-db.md](01-vector-db.md) · [02-embedding-models.md](02-embedding-models.md) — mắt xích retrieval trong bảng trên.
 - [03-rerankers.md](03-rerankers.md) — bước rerank giữa retrieval và generation.
 - [05-model-quick-picks.md](05-model-quick-picks.md) — model nào chạy được với Serving (Ollama/llama.cpp).
-- [03-RAG.md](../../../03-RAG.md) — chương RAG gốc trong roadmap (lý thuyết pipeline đầy đủ).
+- [03-RAG](../03-RAG/README.md) — chương RAG gốc trong roadmap (lý thuyết pipeline đầy đủ).

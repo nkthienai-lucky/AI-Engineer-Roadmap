@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: chọn model local chạy được trên CPU/server nhỏ cho từng việc (chat, VLM, OCR, embedding) — bảng tra + hiểu bản GGUF quantized là gì, tìm trên Hugging Face thế nào.
 >
-> Nguồn mở rộng từ: [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md)
+> Nguồn mở rộng từ: [06-ECOSYSTEM](README.md)
 
 ---
 

@@ -71,4 +71,4 @@
 ---
 
 ## 🔗 Chuyển tiếp
-Xong GĐ2 → bạn hiểu model "nghĩ" thế nào. GĐ3 ([03-RAG.md](03-RAG.md)) giải quyết vấn đề thực tế số 1 của doanh nghiệp: *làm sao để model trả lời đúng dữ liệu riêng của mình*.
+Xong GĐ2 → bạn hiểu model "nghĩ" thế nào. GĐ3 ([03-RAG](../03-RAG/README.md)) giải quyết vấn đề thực tế số 1 của doanh nghiệp: *làm sao để model trả lời đúng dữ liệu riêng của mình*.

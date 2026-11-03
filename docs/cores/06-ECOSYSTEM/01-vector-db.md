@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: tra nhanh khi cần chọn vector database cho RAG — hiểu từng "loại" DB là gì, cột "tự host free"/"cloud free tier" nghĩa gì, và khi nào dùng công cụ nào (không học thuộc).
 >
-> Nguồn mở rộng từ: [06-ECOSYSTEM.md](../../../06-ECOSYSTEM.md)
+> Nguồn mở rộng từ: [06-ECOSYSTEM](README.md)
 
 ---
 

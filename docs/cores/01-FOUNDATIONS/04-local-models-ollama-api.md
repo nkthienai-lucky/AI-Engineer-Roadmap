@@ -3,7 +3,7 @@
 > **Mục tiêu:** Cài và chạy được model local bằng Ollama (Qwen2.5-1.5B, Llama-3.2-3B), gọi model qua API kiểu OpenAI-compatible với `base_url` trỏ về Ollama (đổi 1 dòng config để chuyển backend), hiểu streaming (`stream=True`) và tại sao nó bắt buộc với UX, dùng env var cho API key.
 > **Đầu ra:** Chạy được cùng một đoạn code với cả model local lẫn API thật, chỉ khác một dòng cấu hình.
 
-> Nguồn mở rộng từ: [01-FOUNDATIONS.md](../../../01-FOUNDATIONS.md)
+> Nguồn mở rộng từ: [01-FOUNDATIONS](README.md)
 
 ---
 

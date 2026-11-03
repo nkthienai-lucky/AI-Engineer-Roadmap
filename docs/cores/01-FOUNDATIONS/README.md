@@ -65,4 +65,4 @@
 ---
 
 ## 🔗 Chuyển tiếp
-Xong GĐ1 → bạn đã "dùng được" GenAI. GĐ2 ([02-LLM-INTERNALS.md](02-LLM-INTERNALS.md)) sẽ trả lời câu hỏi *"bên trong cái API đó là gì?"*
+Xong GĐ1 → bạn đã "dùng được" GenAI. GĐ2 ([02-LLM-INTERNALS](../02-LLM-INTERNALS/README.md)) sẽ trả lời câu hỏi *"bên trong cái API đó là gì?"*

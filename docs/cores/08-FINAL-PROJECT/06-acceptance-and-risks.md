@@ -1,7 +1,7 @@
 # Acceptance Criteria & Rủi ro — GenAI Knowledge Assistant
 
 > **Mục tiêu:** Nắm 8 tiêu chí nghiệm thu cuối (đo được, không cảm tính) và 7 rủi ro thường gặp kèm dấu hiệu nhận biết sớm + cách xử lý — để biết khi nào dự án "xong thật" và khi nào đang trượt đường ray thì sửa sớm thay vì muộn.
-> Nguồn mở rộng từ: [08-FINAL-PROJECT.md](../../../08-FINAL-PROJECT.md)
+> Nguồn mở rộng từ: [08-FINAL-PROJECT](README.md)
 
 ---
 
@@ -26,7 +26,7 @@ Phần quan trọng nhất của bảng dưới là cột **dấu hiệu**: rủ
 |---|---|---|
 | Model 3B trả lời chậm trên 2 OCPU | Token đầu > 5s; CPU 100% kéo dài; user phải chờ mỗi lượt | Quantize Q4_K_M, giới hạn max_tokens, cache semantic cho câu lặp |
 | 12GB RAM không đủ (LLM + VLM + DB) | `free -h` thấy RAM trống < 1GB; swap bị dùng nhiều; hệ thống "ì" bất thường | Tải VLM theo demand (unload khi không dùng); hoặc tách VLM sang 1 VPS AMD nhỏ |
-| Oracle "out of capacity" khi tạo VPS | Tạo instance báo lỗi capacity ngay hoặc pending mãi | Thử region Singapore/Osaka, thử lại nhiều lần; xem [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md) |
+| Oracle "out of capacity" khi tạo VPS | Tạo instance báo lỗi capacity ngay hoặc pending mãi | Thử region Singapore/Osaka, thử lại nhiều lần; xem [07-DEPLOYMENT](../07-DEPLOYMENT/README.md) |
 | RAG trả lời sai/hallucination | Câu trả lời có chi tiết không nằm trong context; citation trỏ đoạn không liên quan; feedback xấu tăng | Bắt buộc citation + guardrail "chỉ trả lời dựa trên context"; theo dõi feedback user (US4) |
 | Cloudflare cắt stream (524) khi model sinh lâu | Response dài bị đứt giữa chừng, log Cloudflare hiện HTTP 524 sau ~100s | SSE + keepalive ping 15–30s + giới hạn max_tokens — xem 07-DEPLOYMENT mục C |
 | OOM kill khi load cả LLM + VLM | Process Ollama/VLM chết không rõ lý do, `dmesg` có "Out of memory killed" | OLLAMA_MAX_LOADED_MODELS=1, swap 4GB, unload VLM khi không dùng — xem 07-DEPLOYMENT mục D |
@@ -35,7 +35,7 @@ Phần quan trọng nhất của bảng dưới là cột **dấu hiệu**: rủ
 ### Đọc bảng theo nhóm
 
 - **Nhóm hiệu năng (2 dòng đầu):** hệ quả tất yếu của việc "chạy thật trên CPU free" — đây không phải bug mà là **bài học** về tối ưu inference. Mục tiêu không phải biến 3B thành nhanh như API, mà giữ latency ở mức dùng được (token đầu < 3s).
-- **Nhóm hạ tầng (out of capacity, 524, OOM):** đều là "bẫy" của hạ tầng 0đ. Điểm chung của cách xử lý: **giới hạn và giữ chỗ dư** — giới hạn max_tokens, giới hạn số model nạp, giữ swap, giữ buffer RAM. Chi tiết tại [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md).
+- **Nhóm hạ tầng (out of capacity, 524, OOM):** đều là "bẫy" của hạ tầng 0đ. Điểm chung của cách xử lý: **giới hạn và giữ chỗ dư** — giới hạn max_tokens, giới hạn số model nạp, giữ swap, giữ buffer RAM. Chi tiết tại [07-DEPLOYMENT](../07-DEPLOYMENT/README.md).
 - **Nhóm chất lượng (hallucination):** rủi ro nguy hiểm nhất vì nó **im lặng** — câu trả lời sai nghe vẫn rất tự tin. Ba lớp phòng vệ: guardrail prompt, citation bắt buộc, feedback user (US4) + eval Ragas định kỳ (chính là lý do tiêu chí "RAG đúng" tồn tại).
 - **Nhóm con người (ham tính năng mới):** rủi ro duy nhất không phải kỹ thuật — và là rủi ro khiến dự án chết nhiều nhất. Cách xử lý không phải "cố gắng tập trung" mà là **quy trình**: ý tưởng → backlog → không đụng capstone.
 

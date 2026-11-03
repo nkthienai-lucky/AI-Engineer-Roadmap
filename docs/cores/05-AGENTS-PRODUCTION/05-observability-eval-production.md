@@ -2,7 +2,7 @@
 
 > **Mục tiêu:** Thiết lập logging trace cho agent bằng **Langfuse**, chạy eval online theo dõi chất lượng theo thời gian thật, theo dõi chi phí token và latency P95, và biết A/B thử prompt/model khác nhau một cách có số liệu.
 >
-> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION.md](../../../05-AGENTS-PRODUCTION.md)
+> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION](README.md)
 
 ---
 

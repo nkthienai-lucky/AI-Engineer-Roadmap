@@ -1,7 +1,7 @@
 # Thực hành VLM: Inference & Prompt (Tuần 13)
 
 > **Mục tiêu:** Biết dùng VLM qua transformers/API cho 4 task phổ biến — captioning, VQA, OCR, object grounding — với prompt mẫu cho từng task; biết cách đặt câu hỏi hiệu quả với ảnh và đặt kỳ vọng hợp lý khi thiết kế sản phẩm.
-> Nguồn mở rộng từ: [04-VLM.md](../../../04-VLM.md)
+> Nguồn mở rộng từ: [04-VLM](README.md)
 
 ---
 

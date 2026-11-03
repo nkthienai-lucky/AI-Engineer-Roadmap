@@ -3,7 +3,7 @@
 > **Mục tiêu:** Spec đầy đủ cho project giai đoạn 1: 4 yêu cầu, tiêu chí hoàn thành (DoD), gợi ý cấu trúc code (module config backend, chat loop, streaming), cách deploy demo Gradio lên Hugging Face Spaces, và checklist nghiệm thu cuối cùng.
 > **Đầu ra:** Một chatbot CLI chạy được cả backend local lẫn API thật + 1 demo web public trên HF Spaces.
 
-> Nguồn mở rộng từ: [01-FOUNDATIONS.md](../../../01-FOUNDATIONS.md)
+> Nguồn mở rộng từ: [01-FOUNDATIONS](README.md)
 
 ---
 

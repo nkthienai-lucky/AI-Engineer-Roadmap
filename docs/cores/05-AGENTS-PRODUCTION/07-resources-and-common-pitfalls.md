@@ -2,7 +2,7 @@
 
 > **Mục tiêu:** Có danh sách tài nguyên học tập cho giai đoạn Agents & Production, và hiểu tường tận 4 lỗi thường gặp khiến dự án agent chết trước khi ra production — cùng cách phòng tránh cụ thể cho từng lỗi.
 >
-> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION.md](../../../05-AGENTS-PRODUCTION.md)
+> Nguồn mở rộng từ: [05-AGENTS-PRODUCTION](README.md)
 
 ---
 

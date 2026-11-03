@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: hoàn tất checklist bảo mật tối thiểu trước khi public (AUDIT E), thiết kế backup & phục hồi để mất VPS không mất dữ liệu (AUDIT F), và nắm các đặc thù "không giống ai" của hạ tầng Oracle/ARM/Cloudflare khiến deploy thất bại nếu không biết trước (AUDIT G).
 >
-> Nguồn mở rộng từ: [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md)
+> Nguồn mở rộng từ: [07-DEPLOYMENT](README.md)
 
 ---
 

@@ -1,7 +1,7 @@
 # Tài nguyên & Lỗi thường gặp (GĐ4)
 
 > **Mục tiêu:** Danh sách tài nguyên học VLM chính thức từ roadmap (giữ nguyên toàn bộ link) + 3 lỗi thường gặp được mở rộng chi tiết: nguyên nhân, dấu hiệu nhận biết và cách khắc phục cụ thể khi chạy VLM local.
-> Nguồn mở rộng từ: [04-VLM.md](../../../04-VLM.md)
+> Nguồn mở rộng từ: [04-VLM](README.md)
 
 ---
 

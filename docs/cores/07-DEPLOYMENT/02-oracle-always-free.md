@@ -2,7 +2,7 @@
 
 > **Mục tiêu**: nắm trọn bảng tài nguyên Always Free vĩnh viễn của Oracle Cloud (kèm link chính thức cho từng mục), hiểu hạn mức thực tế của VPS Ampere A1 tính đến 7/2026, và thuộc lòng các "lưu ý vận hành" quyết định instance của bạn sống hay bị thu hồi — trong đó quy tắc **budget alert $1 làm ĐẦU TIÊN** là quan trọng nhất.
 >
-> Nguồn mở rộng từ: [07-DEPLOYMENT.md](../../../07-DEPLOYMENT.md)
+> Nguồn mở rộng từ: [07-DEPLOYMENT](README.md)
 
 ---
 

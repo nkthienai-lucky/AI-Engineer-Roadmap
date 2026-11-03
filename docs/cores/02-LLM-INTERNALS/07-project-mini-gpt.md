@@ -1,7 +1,7 @@
 # Project GĐ2 — "Mini-GPT" (Spec) — Tuần 7
 
 > **Mục tiêu:** Spec project giai đoạn 2 — tự viết transformer bằng PyTorch, train trên dữ liệu nhỏ, sinh text, benchmark KV cache, bonus LoRA Qwen2.5-0.5B. Đây là "tạo khác biệt" giữa kỹ sư AI và người chỉ biết gọi API.
-> Nguồn mở rộng từ: [02-LLM-INTERNALS.md](../../../02-LLM-INTERNALS.md)
+> Nguồn mở rộng từ: [02-LLM-INTERNALS](README.md)
 
 ---
 
@@ -77,7 +77,7 @@ Mẹo debug: train trên 1 batch nhỏ trước — nếu model không overfit �
 
 ## 7. Chuyển tiếp
 
-Xong GĐ2 → bạn hiểu model "nghĩ" thế nào. GĐ3 ([03-RAG.md](../../../03-RAG.md)) giải quyết vấn đề thực tế số 1 của doanh nghiệp: *làm sao để model trả lời đúng dữ liệu riêng của mình*.
+Xong GĐ2 → bạn hiểu model "nghĩ" thế nào. GĐ3 ([03-RAG](../03-RAG/README.md)) giải quyết vấn đề thực tế số 1 của doanh nghiệp: *làm sao để model trả lời đúng dữ liệu riêng của mình*.
 
 ## Liên kết
 
