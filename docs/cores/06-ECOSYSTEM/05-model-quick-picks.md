@@ -12,8 +12,8 @@
 |---|---|---|
 | Chat tiếng Việt | **Qwen3.5-9B** (Q4) | Benchmark 11/2026 trên RTX 5060: 42 tok/s, TTFT 0.17s — điểm ngọt chatbot |
 | Chat nhẹ nhất | Qwen2.5-0.5B/1.5B Q4 | Rất nhanh trên CPU |
-| VLM (ảnh) | **Gemma 4 E4B** | Đa nhiệm (ảnh + audio); OCR tiếng Việt chính xác nhất trong các model đo (170 tok/s) |
-| OCR/VLM tài liệu | **GLM-OCR** (2.7GB, 221 tok/s) | Chuyên tài liệu phức tạp; MiniCPM-V / Qwen-VL khi cần VLM kèm; xem dự án `doc-ocr` |
+| VLM (ảnh) | **Gemma 4 E4B** | Đa nhiệm (ảnh + audio); VLM local OCR tiếng Việt chính xác nhất trong nhóm local (170 tok/s); cloud có MiMo v2.6 Pro chính xác hơn — xem mục Ghi chú |
+| OCR/VLM tài liệu | **GLM-OCR** (2.7GB, 221 tok/s) | Chuyên tài liệu phức tạp; **phải đặt `num_ctx ≥ 16K`** (default 4096 bị ảnh ăn hết context → output cụt); xem dự án `doc-ocr` |
 | Model "khỏe" cho máy 8GB VRAM | Qwen3.6-35B-A3B (MoE) | Chất lượng 35B nhưng chỉ active 3B/token → 15-27 tok/s; prefill chậm (203 tok/s) |
 
 Nguồn model: [huggingface.co](https://huggingface.co/) (tìm bản GGUF quantized).
@@ -45,8 +45,9 @@ Nguồn model: [huggingface.co](https://huggingface.co/) (tìm bản GGUF quanti
 
 - **Qwen3.5-9B Q4**: best pick chat tiếng Việt cho máy 8GB VRAM (đã đo: thông minh nhất trong nhóm dense <10B, trả lời tiếng Việt tốt).
 - **Qwen2.5-0.5B/1.5B Q4**: nhẹ nhất, cực nhanh trên CPU — hợp demo/nhiệm vụ đơn giản, đánh đổi chất lượng.
-- **Gemma 4 E4B**: VLM đa nhiệm (ảnh + audio); trong test OCR tiếng Việt 11/2026 cho kết quả khớp ground-truth chính xác nhất.
-- **GLM-OCR**: chuyên OCR tài liệu phức tạp (layout rối, bảng, dấu tiếng Việt) — nhanh nhưng có thể sai ~5% dấu; dùng kèm VLM để kiểm chứng khi cần độ chính xác cao.
+- **Gemma 4 E4B**: VLM đa nhiệm (ảnh + audio); trong test OCR tiếng Việt 11/2026 cho kết quả khớp ground-truth chính xác nhất trong nhóm local (WER 13,7% trên trang test GT).
+- **GLM-OCR**: chuyên OCR tài liệu phức tạp (layout rối, bảng) — nhanh nhưng **dễ sai dấu tiếng Việt** (test 11/2026: WER 39,6% trên trang test GT); ⚠️ **luôn đặt `num_ctx ≥ 16K`** — default 4096 bị ảnh chiếm hết context khiến output cụt 15 token mà không báo lỗi rõ. Dùng kèm VLM để kiểm chứng khi cần độ chính xác cao.
+- **MiMo v2.6 Pro (xkiro API — cloud)**: bất ngờ là VLM OCR tiếng Việt **chính xác nhất trong mọi model đã đo** (WER 1,2–1,5% / similarity 99,7%, ~10–16s/trang) — đọc đúng cả thanh điệu; cùng model làm backend chatbot GĐ1. Route OCR tài liệu quan trọng lên cloud, giữ Gemma 4 E4B làm fallback offline. Lưu ý kỹ thuật: API này có Cloudflare chặn User-Agent Python (error 1010) — dùng UA kiểu `curl/8.4.0` khi gọi bằng script.
 - **Qwen3.6-35B-A3B**: MoE 3B active — "chất lượng 35B, giá 3B"; hợp khi cần model khỏe trên máy nhỏ (xem mục tối ưu bên dưới).
 - **Qwen3-Embedding-0.6B**: embedding cho RAG — chi tiết ở [02-embedding-models.md](02-embedding-models.md).
 
