@@ -66,6 +66,7 @@ Các kỹ thuật chạy model "lớn hơn sức chứa VRAM" không cần mua c
 
 ## Liên kết
 
+- [07-tech-stack-lifecycle.md](07-tech-stack-lifecycle.md) — bản đồ công nghệ toàn lifecycle 16 khâu (GPU pipeline, Rust, VectorDB, job queue, security, CI/CD).
 - [02-embedding-models.md](02-embedding-models.md) — bảng embedding đầy đủ (gồm Qwen3-Embedding-0.6B).
 - [04-rag-pipeline-tools.md](04-rag-pipeline-tools.md) — Serving (Ollama/llama.cpp/vLLM) là nơi nạp các model này.
 - [06-paid-infrastructure.md](06-paid-infrastructure.md) — khi nào model nhỏ free không đủ thì nâng cấp GPU trả phí.

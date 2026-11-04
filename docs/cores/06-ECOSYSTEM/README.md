@@ -68,13 +68,14 @@
 
 | Việc | Model đề nghị | Ghi chú |
 |---|---|---|
-| Chat tiếng Việt | **Qwen2.5-3B-Instruct Q4** | Qwen hỗ trợ tiếng Việt tốt |
+| Chat tiếng Việt | **Qwen3.5-9B Q4** | Benchmark 11/2026 trên RTX 5060: 42 tok/s — điểm ngọt chatbot |
 | Chat nhẹ nhất | Qwen2.5-0.5B/1.5B Q4 | Rất nhanh trên CPU |
-| VLM (ảnh) | **SmolVLM2-2.2B** | Chạy CPU được |
-| OCR/VLM tài liệu | MiniCPM-V, Qwen2.5-VL-3B | Xem thêm dự án `doc-ocr` trong workspace |
+| VLM (ảnh) | **Gemma 4 E4B** | Đa nhiệm ảnh + audio; OCR tiếng Việt chính xác nhất trong test |
+| OCR/VLM tài liệu | **GLM-OCR**, MiniCPM-V, Qwen-VL | Xem thêm dự án `doc-ocr` trong workspace |
 | Embedding | Qwen3-Embedding-0.6B | Xem bảng trên |
 
 Nguồn model: [huggingface.co](https://huggingface.co/) (tìm bản GGUF quantized).
+Chi tiết: [05-model-quick-picks.md](05-model-quick-picks.md) (chọn model + tối ưu inference) · [07-tech-stack-lifecycle.md](07-tech-stack-lifecycle.md) (tech stack toàn lifecycle).
 
 ---
 
