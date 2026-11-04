@@ -58,18 +58,18 @@ Kết nối Postgres: `host=localhost port=5432 dbname=roadmap user=roadmap pass
 
 ---
 
-## 4. Models đã cài (Ollama) — đủ cho 01→08
+## 4. Models đã cài (Ollama) — lineup 11/2026 (sau benchmark trên RTX 5060 8GB)
 
-| Model | Kích thước | Dùng cho |
-|---|---|---|
-| `qwen2.5:1.5b` | 986 MB | 01 chatbot, chat nhẹ |
-| `qwen2.5:3b` | 1.9 GB | Chat tiếng Việt chính (01, 08) |
-| `qwen2.5vl:3b` | 3.2 GB | **VLM** — hiểu ảnh (04, 08) |
-| `hf.co/ggml-org/SmolVLM2-2.2B-Instruct-GGUF:Q4_K_M` | 1.7 GB | VLM nhẹ (04) — so sánh |
-| `qwen3-embedding:0.6b` | 639 MB | Embedding cho RAG (03, 08) |
+| Model | Kích thước | Dùng cho | Benchmark đo tại chỗ |
+|---|---|---|---|
+| `qwen3.5:9b` | 6.6 GB | **LLM chatbot chính** (01, 05, 08) | 42 tok/s · TTFT 0.17s · prefill 2140 tok/s · quiz 3/4 |
+| `gemma4:e4b` | 6.6 GB | **VLM tổng quát** + audio (04, 08) | OCR tiếng Việt chính xác nhất trong các model đo · 170 tok/s |
+| `glm-ocr` | 2.7 GB | **Chuyên OCR/tài liệu** phức tạp (04, 08) | 221 tok/s · lỗi ~5% dấu tiếng Việt |
+| `qwen3-embedding:0.6b` | 639 MB | Embedding cho RAG (03, 08) | — |
 
-> Tất cả **offload lên GPU** (xác nhận: `offloaded 29/29 layers to GPU`, VRAM inference ~4.3GB).
-> SmolVLM2 không có trong Ollama official library → kéo qua `hf.co/ggml-org/...GGUF`.
+> Tất cả offload GPU (VRAM inference 5.5–6.6GB). Benchmark đầy đủ: `wsl_models_bench.sh` + `wsl_llm_rigorous.sh` (tại gốc `D:/Thien/Code/`).
+>
+> **Đã đo và loại (11/2026):** `qwen2.5:1.5b/3b`, `qwen3:8b`, `Sailor2-8B`, `qwen2.5vl:3b`, `SmolVLM2`, `minicpm-v4.6`, `lfm3-vl`, `qwen3-vl:4b/8b` (bug template thinking của Ollama — [issue #14798](https://github.com/ollama/ollama/issues/14798)), `qwen3.6:35b-a3b` (thông minh nhất — quiz 4/4 — nhưng prefill chỉ 203 tok/s; giữ làm model "escalation" khi cần chất lượng cao, kéo lại khi cần: `ollama pull qwen3.6:35b-a3b` ~22GB).
 
 ---
 
@@ -124,7 +124,8 @@ Các script cài đặt nằm tại `doc-ocr/workspace/wsl_*.sh` (chạy trong W
 | `wsl_install_node_pg.sh` | Node (nvm) + Postgres/pgvector (Docker) |
 | `wsl_install_ollama.sh` | Ollama user-mode (`.tar.zst`) |
 | `wsl_start_ollama.sh` | Khởi động `ollama serve` |
-| `wsl_pull_models.sh` | Kéo 5 models roadmap |
+| `wsl_pull_models.sh` | Kéo models roadmap (lineup cũ) |
+| `wsl_models_pull.sh` / `wsl_models_bench.sh` / `wsl_llm_rigorous.sh` / `wsl_models_cleanup.sh` | Kéo / benchmark / đo kỹ chatbot / dọn models — lineup 11/2026 (tại gốc `D:/Thien/Code/`) |
 | `wsl_venv_core.sh` | Venv + core (FastAPI/Gradio/jupyter) |
 | `wsl_venv_torch.sh` | PyTorch cu128 + training stack |
 | `wsl_fix_trainstack.sh` / `wsl_setup_minbpe.sh` | Sửa minbpe + phần training |

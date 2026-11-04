@@ -10,11 +10,11 @@
 
 | Việc | Model đề nghị | Ghi chú |
 |---|---|---|
-| Chat tiếng Việt | **Qwen2.5-3B-Instruct Q4** | Qwen hỗ trợ tiếng Việt tốt |
+| Chat tiếng Việt | **Qwen3.5-9B** (Q4) | Benchmark 11/2026 trên RTX 5060: 42 tok/s, TTFT 0.17s — điểm ngọt chatbot |
 | Chat nhẹ nhất | Qwen2.5-0.5B/1.5B Q4 | Rất nhanh trên CPU |
-| VLM (ảnh) | **SmolVLM2-2.2B** | Chạy CPU được |
-| OCR/VLM tài liệu | MiniCPM-V, Qwen2.5-VL-3B | Xem thêm dự án `doc-ocr` trong workspace |
-| Embedding | Qwen3-Embedding-0.6B | Xem bảng trên |
+| VLM (ảnh) | **Gemma 4 E4B** | Đa nhiệm (ảnh + audio); OCR tiếng Việt chính xác nhất trong các model đo (170 tok/s) |
+| OCR/VLM tài liệu | **GLM-OCR** (2.7GB, 221 tok/s) | Chuyên tài liệu phức tạp; MiniCPM-V / Qwen-VL khi cần VLM kèm; xem dự án `doc-ocr` |
+| Model "khỏe" cho máy 8GB VRAM | Qwen3.6-35B-A3B (MoE) | Chất lượng 35B nhưng chỉ active 3B/token → 15-27 tok/s; prefill chậm (203 tok/s) |
 
 Nguồn model: [huggingface.co](https://huggingface.co/) (tìm bản GGUF quantized).
 
@@ -43,11 +43,26 @@ Nguồn model: [huggingface.co](https://huggingface.co/) (tìm bản GGUF quanti
 
 ## Ghi chú từng dòng
 
-- **Qwen2.5-3B-Instruct Q4**: best pick chat tiếng Việt trong tầm CPU — Qwen hỗ trợ tiếng Việt tốt, bản Q4 chạy mượt.
+- **Qwen3.5-9B Q4**: best pick chat tiếng Việt cho máy 8GB VRAM (đã đo: thông minh nhất trong nhóm dense <10B, trả lời tiếng Việt tốt).
 - **Qwen2.5-0.5B/1.5B Q4**: nhẹ nhất, cực nhanh trên CPU — hợp demo/nhiệm vụ đơn giản, đánh đổi chất lượng.
-- **SmolVLM2-2.2B**: VLM nhỏ xử lý ảnh, chạy CPU được — hợp mô tả ảnh, truy vấn ảnh đơn giản.
-- **MiniCPM-V, Qwen2.5-VL-3B**: OCR/VLM tài liệu — đọc bảng/công thức/ảnh chụp tài liệu (xem `doc-ocr` ở trên).
+- **Gemma 4 E4B**: VLM đa nhiệm (ảnh + audio); trong test OCR tiếng Việt 11/2026 cho kết quả khớp ground-truth chính xác nhất.
+- **GLM-OCR**: chuyên OCR tài liệu phức tạp (layout rối, bảng, dấu tiếng Việt) — nhanh nhưng có thể sai ~5% dấu; dùng kèm VLM để kiểm chứng khi cần độ chính xác cao.
+- **Qwen3.6-35B-A3B**: MoE 3B active — "chất lượng 35B, giá 3B"; hợp khi cần model khỏe trên máy nhỏ (xem mục tối ưu bên dưới).
 - **Qwen3-Embedding-0.6B**: embedding cho RAG — chi tiết ở [02-embedding-models.md](02-embedding-models.md).
+
+---
+
+## Tối ưu deploy model mạnh hơn trên GPU nhỏ (11/2026)
+
+Các kỹ thuật chạy model "lớn hơn sức chứa VRAM" không cần mua card mới:
+
+- **MoE CPU offload** (`llama.cpp --n-cpu-moe N`): giữ expert của MoE trong RAM, trunk + KV cache vẫn ở GPU — mỗi token chỉ kích hoạt vài expert (VD Qwen3.6-35B-A3B active 3B/35B). Đây là "mánh" chính giúp 8GB VRAM chạy được model 35B.
+- **KV cache quantization** (`-ctk q8_0 -ctv q4_0`): nén cache attention → giảm 50-66% VRAM mỗi token context → context dài hơn trong cùng VRAM.
+- **Speculative decoding / MTP**: draft model nhỏ (hoặc đầu MTP có sẵn của model, VD Qwen3.8) đoán trước token — speedup decode tới ~2.8x.
+- **Chọn quant đúng**: `Q4_K_M` là điểm ngọt; quant 1-bit (IQ1) nhét vừa VRAM nhưng **chất lượng sụp** (benchmark: 27B 1-bit thua 8B 4-bit); imatrix quant (`IQ4_XS`) tốt hơn ở bit thấp.
+- **Chọn engine**: `llama.cpp` khi cần full control flags (GPU nhỏ) > `Ollama` (UX tốt, đủ dùng 1 người) > `vLLM`/`SGLang` khi cần **nhiều user đồng thời** (continuous batching).
+- **Flag hay quên**: flash attention (`-fa on`), `--load-mode none` (nạp RAM thay vì mmap), tune batch (`-b 512 -ub 256`), `keep_alive` dài để giữ model nóng.
+- **Hybrid local + cloud**: gateway (VD LiteLLM) route theo độ phức tạp/độ nhạy cảm dữ liệu — câu dễ xử lý bằng model local, câu khó đẩy lên cloud API; thực tế 70-80% traffic đi được đường rẻ.
 
 ## Liên kết
 

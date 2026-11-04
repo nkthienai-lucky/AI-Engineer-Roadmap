@@ -22,18 +22,18 @@ Tại sao phải biết chạy local (thay vì chỉ dùng API cloud):
 Cài Ollama theo hướng dẫn tại [ollama.com](https://ollama.com/), sau đó kéo và chạy model từ terminal:
 
 ```bash
-ollama run qwen2.5:1.5b       # model ~1GB, chạy mượt cả trên CPU/laptop
-ollama run llama3.2:3b        # model ~2GB, chất lượng khá hơn, cần nhiều RAM hơn
+ollama run qwen3.5:9b         # model 6.6GB — LLM chính của roadmap (xem ENVIRONMENT-SETUP.md)
+ollama run qwen2.5:1.5b       # model ~1GB — bản siêu nhẹ, chạy mượt cả trên CPU/laptop
 ```
 
 Hai model nên bắt đầu:
 
 | Model | Cỡ | Đặc điểm |
 |---|---|---|
-| **Qwen2.5-1.5B** | ~1.5 tỷ tham số | Rất nhẹ, nhanh, đủ cho chatbot demo và test pipeline |
-| **Llama-3.2-3B** | ~3 tỷ tham số | Chậm hơn một chút, trả lời tốt hơn cho câu hỏi phức tạp |
+| **Qwen3.5-9B** | ~9 tỷ tham số | LLM chính của roadmap — thông minh nhất nhóm dense <10B, tiếng Việt tốt |
+| **Qwen2.5-1.5B** | ~1.5 tỷ tham số | Rất nhẹ, nhanh, đủ cho chatbot demo và test pipeline trên máy yếu |
 
-Lưu ý thực tế: "1.5B/3B" là số tham số — càng lớn thì càng **tốn RAM/VRAM và sinh chậm hơn**, nhưng thông minh hơn. Với máy 8GB RAM, Qwen2.5-1.5B là lựa chọn an toàn. Sau khi `ollama run`, server API local đã sẵn sàng ở `localhost:11434`.
+Lưu ý thực tế: "1.5B/9B" là số tham số — càng lớn thì càng **tốn RAM/VRAM và sinh chậm hơn**, nhưng thông minh hơn. Với máy 8GB VRAM như của roadmap, Qwen3.5-9B (6.6GB Q4) là lựa chọn chính; máy yếu thì bắt đầu bằng bản 1.5B. Sau khi `ollama run`, server API local đã sẵn sàng ở `localhost:11434`.
 
 ## API kiểu OpenAI-compatible — "đổi 1 dòng config"
 
@@ -47,7 +47,7 @@ client = OpenAI(
     api_key="ollama",                        # local không kiểm key, để giá trị bất kỳ
 )
 resp = client.chat.completions.create(
-    model="qwen2.5:1.5b",
+    model="qwen3.5:9b",
     messages=[{"role": "user", "content": "Xin chào!"}],
 )
 print(resp.choices[0].message.content)
@@ -61,7 +61,7 @@ Mặc định, API trả kết quả **trọn một cục** sau khi model sinh x
 
 ```python
 stream = client.chat.completions.create(
-    model="qwen2.5:1.5b",
+    model="qwen3.5:9b",
     messages=[{"role": "user", "content": "Kể 1 câu chuyện ngắn"}],
     stream=True,
 )
