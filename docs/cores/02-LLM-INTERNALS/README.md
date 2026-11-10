@@ -56,10 +56,12 @@
 5. *(Bonus)* Fine-tune `Qwen2.5-0.5B` bằng LoRA trên 1 tập dữ liệu nhỏ (dùng Colab free GPU)
 
 **Tiêu chí hoàn thành (DoD):**
-- [ ] Code attention ~50 dòng, giải thích được từng biến
-- [ ] Loss giảm dần khi train, sample text "có vẻ giống" dữ liệu huấn luyện
-- [ ] Notebook/blog giải thích kiến trúc (đây là tài liệu phỏng vấn giá trị)
-- [ ] Trả lời được: "Tại sao attention là O(n²)? KV cache tiết kiệm gì?"
+- [x] Code attention ~50 dòng, giải thích được từng biến — ✅ 2026-11-10: `mini-gpt/model.py` (58 dòng manual Q/K/V/mask), 26 test
+- [x] Loss giảm dần khi train, sample text "có vẻ giống" dữ liệu huấn luyện — ✅ 2026-11-10: 5.000 steps val loss 4.24→1.61, sample ra lời thoại Shakespeare có tên nhân vật
+- [x] Notebook/blog giải thích kiến trúc (đây là tài liệu phỏng vấn giá trị) — ✅ 2026-11-10: README diagram tensor shapes + LESSONS.md tổng hợp
+- [x] Trả lời được: "Tại sao attention là O(n²)? KV cache tiết kiệm gì?" — ✅ 2026-11-10: benchmark thật CPU+GPU (cached +14% trên RTX 5060), giải thích bằng số liệu
+
+*Bonus hoàn thành 2026-11-10 (không cần Colab — chạy local trên RTX 5060):* BPE tokenizer viết tay kiểu minbpe (nén 1.000→0.496 token/char) và QLoRA Qwen3.5-0.8B (JSON-format compliance 0%→93.3% với adapter 0.14% params). Chi tiết: `mini-gpt/README.md` + `mini-gpt/LESSONS.md`.
 
 ---
 
