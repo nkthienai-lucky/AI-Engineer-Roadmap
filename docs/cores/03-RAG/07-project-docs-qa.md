@@ -66,7 +66,7 @@ Luồng người dùng: **upload PDF → hỏi → trả lời kèm nguồn (tra
 - [ ] Trả lời có trích dẫn nguồn, click ra được đoạn gốc
 - [ ] Bảng eval Ragas: faithfulness > 0.8, context recall > 0.7
 - [ ] Có bảng so sánh "naive vs +rerank vs +hybrid" bằng số liệu
-- [ ] Deploy lên HF Spaces hoặc Oracle VPS
+- [ ] Deploy: **Render free** (app nhẹ) hoặc **Oracle VPS** (cần DB server 24/7) — HF Spaces đã hết free cho Gradio từ 2026
 
 ## Checklist nghiệm thu
 
@@ -78,7 +78,7 @@ Luồng người dùng: **upload PDF → hỏi → trả lời kèm nguồn (tra
 - [ ] **V3:** chạy Ragas in đủ 4 metric; bảng so sánh naive vs +rerank vs +hybrid có số liệu thật
 - [ ] **V3:** đạt DoD faithfulness > 0.8 và context recall > 0.7
 - [ ] **UI:** upload → hỏi → trả lời kèm nguồn, click ra được đoạn gốc
-- [ ] **Deploy:** app chạy trên HF Spaces hoặc Oracle VPS, người khác truy cập được
+- [ ] **Deploy:** app chạy trên Render free hoặc Oracle VPS, người khác truy cập được
 
 ## Liên kết
 

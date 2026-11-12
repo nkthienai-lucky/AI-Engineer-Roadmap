@@ -1,7 +1,9 @@
 # Giai đoạn 1 — Nền tảng GenAI & Prompting (Tuần 1–3)
 
 > **Mục tiêu:** Hiểu GenAI là gì, gọi được LLM API thành thạo, viết prompt tốt, deploy demo đầu tiên.
-> **Đầu ra:** Chatbot CLI + 1 demo Gradio trên Hugging Face Spaces.
+> **Đầu ra:** Chatbot CLI + 1 demo Gradio deploy công khai (Render free).
+
+> ⚠️ **Cập nhật 2026-11:** HF Spaces **không còn free cho Gradio/Docker** (free chỉ còn Static Space; tạo Gradio Space trả `402 Payment Required`). Dùng **Render free** thay thế — cùng code Gradio, chỉ khác nền tảng. Đã verify với chatbot GĐ1: **https://chatbot-cli.onrender.com/**. Xem [07-DEPLOYMENT](../07-DEPLOYMENT/README.md).
 
 ---
 
@@ -23,7 +25,7 @@
 - Cài **Ollama**, chạy model local (Qwen2.5-1.5B, Llama-3.2-3B)
 - API kiểu OpenAI-compatible (`base_url` trỏ về Ollama)
 - Xây chatbot CLI có streaming + history
-- Deploy demo lên Hugging Face Spaces
+- Deploy demo lên Render free (Gradio) — có URL public
 
 ---
 
@@ -46,7 +48,7 @@
 1. CLI chatbot Python: nhập câu hỏi → in streaming câu trả lời, giữ lịch sử hội thoại
 2. Chạy được với cả 2 backend: Ollama local **và** API thật (đổi 1 dòng config)
 3. Chế độ "hệ thống" (system prompt) tùy chỉnh được
-4. Deploy 1 phiên bản web lên **HF Spaces** (Gradio) — có URL public
+4. Deploy 1 phiên bản web lên **Render free** (Gradio) — có URL public *(HF Spaces đã hết free cho Gradio từ 2026 — dùng Render)*
 
 **Tiêu chí hoàn thành (DoD):**
 - [ ] `python chat.py` chạy được, stream mượt

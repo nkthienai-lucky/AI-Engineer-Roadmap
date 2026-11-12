@@ -1,7 +1,7 @@
 # Project GĐ1 — "Chatbot CLI + Demo"
 
-> **Mục tiêu:** Spec đầy đủ cho project giai đoạn 1: 4 yêu cầu, tiêu chí hoàn thành (DoD), gợi ý cấu trúc code (module config backend, chat loop, streaming), cách deploy demo Gradio lên Hugging Face Spaces, và checklist nghiệm thu cuối cùng.
-> **Đầu ra:** Một chatbot CLI chạy được cả backend local lẫn API thật + 1 demo web public trên HF Spaces.
+> **Mục tiêu:** Spec đầy đủ cho project giai đoạn 1: 4 yêu cầu, tiêu chí hoàn thành (DoD), gợi ý cấu trúc code (module config backend, chat loop, streaming), cách deploy demo Gradio lên Render free, và checklist nghiệm thu cuối cùng.
+> **Đầu ra:** Một chatbot CLI chạy được cả backend local lẫn API thật + 1 demo web public trên Render free.
 
 > Nguồn mở rộng từ: [01-FOUNDATIONS](README.md)
 
@@ -26,8 +26,8 @@ Yêu cầu gốc từ nguồn, kèm giải thích *tại sao yêu cầu đó t�
 3. **Chế độ "hệ thống" (system prompt) tùy chỉnh được.**
    User sửa được system prompt (qua biến môi trường, file config, hoặc flag `--system`) để đổi vai trò/phong cách chatbot mà không sửa code — ứng dụng trực tiếp phần system prompt trong [03-prompt-engineering.md](03-prompt-engineering.md).
 
-4. **Deploy 1 phiên bản web lên HF Spaces (Gradio) — có URL public.**
-   Gradio ([gradio.app](https://www.gradio.app/)) dựng UI chat nhanh với vài dòng code; Hugging Face Spaces host app đó lên web với URL công khai gửi được cho bạn bè.
+4. **Deploy 1 phiên bản web lên Render free (Gradio) — có URL public.**
+   Gradio ([gradio.app](https://www.gradio.app/)) dựng UI chat nhanh với vài dòng code; Render free host app đó lên web với URL công khai gửi được cho bạn bè (HF Spaces đã hết free cho Gradio từ 2026).
 
 ## Tiêu chí hoàn thành (DoD)
 
@@ -112,7 +112,9 @@ def stream_chat(messages: list[dict]) -> str:
 
 ---
 
-## Deploy Gradio lên HF Spaces
+## Deploy Gradio lên Render free
+
+> ⚠️ **Cập nhật 2026-11:** HF Spaces **đã hết free cho Gradio/Docker** (tạo Space trả `402 Payment Required`; free chỉ còn Static Space). Deploy Gradio lên **Render free** thay thế — cùng code. Đã verify: chatbot GĐ1 live tại [chatbot-cli.onrender.com](https://chatbot-cli.onrender.com/).
 
 Các bước (dùng Gradio — [gradio.app](https://www.gradio.app/)):
 
@@ -134,9 +136,12 @@ demo = gr.ChatInterface(respond, title="Chatbot GĐ1")
 demo.launch()
 ```
 
-2. **Tạo Space trên Hugging Face:** chọn SDK **Gradio**, đặt tên public.
-3. **Đẩy code lên Space** (repo HF của Space) với `requirements.txt` (gradio, openai) và `app.py` là entrypoint.
-4. **Cấu hình secrets:** đặt `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL` trong mục Settings → Secrets của Space (API key **không** hard-code — [04-local-models-ollama-api.md](04-local-models-ollama-api.md)). Lưu ý: Ollama local không chạy trên Spaces được → Space phải trỏ `LLM_BASE_URL` tới API thật.
+2. **Đẩy code lên GitHub** (Render deploy từ Git repo — không upload trực tiếp).
+3. **Tạo Web Service trên [render.com](https://render.com)** → connect repo → điền tay (form **không tự đọc render.yaml**, chỉ luồng Blueprint mới đọc):
+   - Build: `pip install -r requirements.txt`
+   - Start: `GRADIO_SERVER_NAME=0.0.0.0 python app.py` *(bắt buộc bind `0.0.0.0`, để `127.0.0.1` Render không thấy process)*
+   - Plan Free ($0).
+4. **Cấu hình secrets:** đặt `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL` trong **Environment** của service (API key **không** hard-code — [04-local-models-ollama-api.md](04-local-models-ollama-api.md)). Lưu ý: Ollama local không chạy trên Render được → service phải trỏ `LLM_BASE_URL` tới API thật.
 
 Tách `stream_chat` (in ra terminal, dùng cho CLI) và `stream_chat_plain` (trả text/yield token, dùng cho Gradio) — cùng một wrapper gọi API, khác cách hiển thị; hoặc gộp thành một hàm với tham số `echo=True/False`.
 5. Space build xong → có **URL public** gửi cho bạn bè (thỏa yêu cầu 4).

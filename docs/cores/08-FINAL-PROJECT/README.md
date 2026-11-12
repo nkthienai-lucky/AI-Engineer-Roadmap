@@ -88,7 +88,7 @@ User ──HTTPS──► Cloudflare ──►│  Oracle Always Free VPS (2CPU/
 | **M3** (tuần 17) | GĐ4 xong | VLM: upload ảnh → mô tả / trích JSON | Trích xuất đúng 8/10 hóa đơn test |
 | **M4** (tuần 18) | GĐ5 xong | Production: deploy Oracle, monitoring, agent tool (tìm kiếm web/tính toán) | Site live trên domain, uptime > 99% tuần đầu |
 
-**Quy tắc:** M1–M3 chạy local + HF Spaces; M4 mới deploy production. Không mở rộng scope ngoài 4 milestone.
+**Quy tắc:** M1–M3 chạy local + demo trên **Render free** (HF Spaces đã hết free cho Gradio từ 2026 — xem [07-DEPLOYMENT](../07-DEPLOYMENT/README.md)); M4 mới deploy production Oracle. Không mở rộng scope ngoài 4 milestone.
 
 ## 6. ✅ Tiêu chí nghiệm thu cuối (acceptance criteria)
 

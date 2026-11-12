@@ -7,7 +7,7 @@
 
 ## Tổng quan
 
-**Đầu ra:** app VLM chạy local + demo public (HF Spaces). Project này chứng minh bạn **dùng được VLM như một kỹ sư** — không chỉ gọi API mà còn so sánh model, biết giới hạn, deploy được. Đây là mảnh ghép cuối trước khi GĐ5 ([05-AGENTS-PRODUCTION](../05-AGENTS-PRODUCTION/README.md)) ghép tất cả thành sản phẩm.
+**Đầu ra:** app VLM chạy local + demo public (Oracle VPS hoặc Render). Project này chứng minh bạn **dùng được VLM như một kỹ sư** — không chỉ gọi API mà còn so sánh model, biết giới hạn, deploy được. Đây là mảnh ghép cuối trước khi GĐ5 ([05-AGENTS-PRODUCTION](../05-AGENTS-PRODUCTION/README.md)) ghép tất cả thành sản phẩm.
 
 ## 2 lựa chọn (chọn 1)
 
@@ -26,14 +26,14 @@
 1. Chạy local bằng `SmolVLM2-2.2B` (CPU OK) hoặc `Qwen2.5-VL-3B`
 2. Có UI Gradio upload ảnh
 3. So sánh chất lượng 2 model khác nhau (bảng đánh giá tay 20 ảnh)
-4. Deploy lên HF Spaces (ZeroGPU hoặc CPU)
+4. Deploy demo: **Oracle VPS** (model 2-3GB chạy ngay trên VPS 12GB RAM) hoặc **Render free** (UI mỏng gọi API VLM bên ngoài)
 
 ### Gợi ý triển khai từng yêu cầu
 
 1. **Model local:** dùng `transformers` như ví dụ ở [04 — Thực hành & Prompt](04-vlm-practice-and-prompting.md). Ưu tiên `SmolVLM2-2.2B-Instruct` nếu chạy CPU; `Qwen2.5-VL-3B` nếu có GPU nhỏ. Quantize 4-bit (bitsandbytes/llama.cpp) nếu RAM hạn chế.
 2. **UI Gradio:** `gr.Image` + `gr.Textbox` (A) hoặc `gr.Image` + `gr.JSON`/`gr.Code` (B); thêm nút "Chạy", hiển thị thời gian xử lý (đo cho DoD latency).
 3. **So sánh 2 model:** chọn cặp (SmolVLM2-2.2B + Qwen2.5-VL-3B), chạy cùng 20 ảnh test (5 ảnh dễ / 10 trung bình / 5 khó — cố tình có ảnh chữ nhỏ, nhiều đối tượng để lộ giới hạn), chấm tay đúng/sai/một phần, ghi **ví dụ đúng và sai cụ thể** vào bảng.
-4. **Deploy HF Spaces:** repo Space chứa `app.py` + `requirements.txt`; CPU Space chạy được model 2–3B quantized (chậm nhưng OK — giữ latency expectation), ZeroGPU thì dùng `spaces.GPU` decorator.
+4. **Deploy (HF Spaces đã hết free 2026):** Render free chỉ 512MB RAM — không đủ chứa VLM 2–3GB. Chọn: (a) **Oracle VPS** chạy model ngay trên VPS theo [07-DEPLOYMENT](../../07-DEPLOYMENT/README.md), hoặc (b) **Render free** làm UI mỏng gọi API VLM (Ollama máy nhà / API thật).
 
 ## Tiêu chí hoàn thành (DoD — giữ nguyên từ nguồn)
 
@@ -76,7 +76,7 @@ images/             # 20 ảnh test (ảnh thật, không dùng ảnh stock đã
 - [ ] Bảng so sánh SmolVLM2 vs Qwen2.5-VL trên **20 ảnh**, có cột đúng/sai/một phần + ví dụ cụ thể
 - [ ] Ghi lại 1–2 case model sai (đếm, chữ nhỏ…) — chứng minh biết giới hạn (file 03)
 - [ ] Viết được đoạn trả lời "VLM khác gì LLM + OCR?" (có thể để trong README)
-- [ ] Deploy HF Spaces thành công, **demo URL hoạt động** khi mở ở trình duyệt lạ
+- [ ] Deploy thành công (Oracle VPS hoặc Render), **demo URL hoạt động** khi mở ở trình duyệt lạ
 - [ ] README mô tả: cách cài, cách chạy, model dùng, bảng so sánh, giới hạn đã biết
 
 ## Liên kết

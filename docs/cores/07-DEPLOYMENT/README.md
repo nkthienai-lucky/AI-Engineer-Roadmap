@@ -1,7 +1,38 @@
-# 07 — Deploy 0đ lên Oracle Always Free
+# 07 — Deploy 0đ: Render (demo) + Oracle (production)
 
-> Checklist đầy đủ để deploy 1 sản phẩm GenAI hoàn chỉnh (domain + DB + model) với chi phí 0đ.
+> Checklist đầy đủ để deploy sản phẩm GenAI (domain + DB + model) với chi phí 0đ.
 > Áp dụng cho mọi project trong lộ trình, đặc biệt là sản phẩm cuối.
+
+## 🚀 Chọn nền tảng deploy theo giai đoạn (QUYẾT ĐỊNH 2026-11)
+
+| Khối lượng app | Nền tảng | Khi nào dùng | Ví dụ đã verify |
+|---|---|---|---|
+| Demo nhẹ (Gradio, model < 500MB, không DB) | **Render free** | Mọi demo giữa giai đoạn | [chatbot-cli.onrender.com](https://chatbot-cli.onrender.com/) (GĐ1), [mini-gpt-m48o.onrender.com](https://mini-gpt-m48o.onrender.com/) (GĐ2) |
+| App nặng (model 2GB+, pgvector, chạy 24/7) | **Oracle Always Free** (VPS 2 OCPU/12GB) | GĐ4 VLM, sản phẩm cuối | chưa setup — làm theo mục A–G bên dưới |
+| Static (HTML/JS thuần, không Python) | HF Static Space | hiếm khi cần | — |
+
+> ⚠️ **HF Spaces đổi chính sách 2026:** free tier **không còn Gradio/Docker Space** (tạo trả `402 Payment Required`; ZeroGPU chỉ cho Pro). **Model repo trên HF Hub vẫn free** — dùng để host checkpoint (vd: [Thienpkae/mini-gpt-shakespeare](https://huggingface.co/Thienpkae/mini-gpt-shakespeare)), build Render tự tải về.
+
+### Deploy Render free — checklist 5 phút (đã verify 2 lần)
+
+1. Code phải nằm trên **GitHub** (Render deploy từ Git repo).
+2. Trên [render.com](https://render.com) → **New +** → **Web Service** → connect repo. ⚠️ Form **không tự đọc `render.yaml`** (chỉ luồng Blueprint đọc) → điền tay:
+   - **Build Command:** `pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt` *(CPU torch nhẹ hơn nhiều so với bản CUDA mặc định)*
+   - **Start Command:** `GRADIO_SERVER_NAME=0.0.0.0 python app.py` *(bắt buộc `0.0.0.0`, dùng `127.0.0.1` Render không thấy process)*
+   - Plan **Free** (0.1 CPU / 512MB RAM)
+3. Checkpoint/model lớn: **không commit vào repo** — upload lên HF Hub (model repo free), build command thêm `python -c "from webapp import ensure_checkpoint; print(ensure_checkpoint())"` để tải lúc build (bake vào image).
+4. Env secrets (API key, `HF_TOKEN`): dashboard → **Environment** → add → auto redeploy.
+5. Free plan: **sleep sau ~15 phút không dùng**, lần mở đầu chờ ~50s. Giới hạn **512MB RAM** — model + framework phải nằm gọn (torch + gradio + model 10MB ≈ 400MB là ổn; model 2GB+ → dùng Oracle).
+
+### 🔑 Token & credential — lấy ở đâu (luồng tự động)
+
+| Token | Lấy ở đâu | Dùng cho |
+|---|---|---|
+| **HF token** | [hf.co/settings/tokens](https://huggingface.co/settings/tokens) — tạo type **Read** (đủ cho download) hoặc **Write** (cần upload checkpoint) | Upload checkpoint lên Hub, `HF_TOKEN` trên Render để tránh rate limit download |
+| **GitHub PAT** | [github.com/settings/tokens](https://github.com/settings/tokens) — scope `repo` là đủ | Push code khi máy không có credential, gọi GitHub API |
+| **Render** | Đăng nhập bằng GitHub account (không cần API key cho luồng thủ công) | Tạo/sửa Web Service |
+
+> 🔒 Token đã lưu sẵn tại `~/.claude/secrets/deploy.env` (Windows: `C:\Users\<user>\.claude\secrets\deploy.env` — ngoài mọi git repo). Claude biết vị trí này (đã có trong memory) — chỉ cần bảo *"dùng token trong file secrets"*. **Không dán token vào chat**; nếu lộ → revoke + tạo lại tại link bảng trên.
 
 ---
 

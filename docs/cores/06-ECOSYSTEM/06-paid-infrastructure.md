@@ -26,7 +26,7 @@
 
 ## Khi nào nên nâng cấp từ free?
 
-- **Free tier chạm giới hạn**: rate limit/timeout của Ollama free host, Hugging Face Spaces free (CPU yếu), Colab/Kaggle hết giờ — khi thao tác thật bị chặn, không chỉ "muốn nhanh hơn".
+- **Free tier chạm giới hạn**: rate limit/timeout của Ollama free host, Render free (512MB RAM, sleep khi idle), Colab/Kaggle hết giờ — khi thao tác thật bị chặn, không chỉ "muốn nhanh hơn".
 - **Cần uptime/SLA** cho user thật: free tier ngủ khi idle, hay bị kill → production cần compute trả phí (thường RunPod Serverless/Modal trước, vì chỉ ~$5–20/tháng app nhỏ).
 - **Train/fine-tune hoặc batch lớn**: CPU/free không khả thi về thời gian → thuê GPU theo giờ (Vast.ai rẻ nhất cho việc có điểm dừng).
 - **Nguyên tắc chi phí**: tính trước "số giờ × giá giờ" so với giá gói tháng (VD: $0.34/h × 720h ≈ $250/tháng — nếu nhu cầu gần full-time, cân nhắc máy riêng/dedicated thay vì thuê giờ).

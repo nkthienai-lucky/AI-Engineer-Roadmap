@@ -1,6 +1,6 @@
 # Milestones — GenAI Knowledge Assistant
 
-> **Mục tiêu:** Nắm 4 milestone M1–M4 (tuần 15–18), nội dung và tiêu chí nghiệm thu từng milestone, quy tắc cứng "M1–M3 local + HF Spaces, M4 mới deploy production", và cách capstone ghép với 5 giai đoạn học trước đó (GĐ1–5).
+> **Mục tiêu:** Nắm 4 milestone M1–M4 (tuần 15–18), nội dung và tiêu chí nghiệm thu từng milestone, quy tắc cứng "M1–M3 local + Render demo, M4 mới deploy production", và cách capstone ghép với 5 giai đoạn học trước đó (GĐ1–5).
 > Nguồn mở rộng từ: [08-FINAL-PROJECT](README.md)
 
 ---
@@ -30,9 +30,9 @@ Ba việc: (1) deploy Oracle VPS + Cloudflare + domain, (2) monitoring (Langfuse
 
 ## Quy tắc cứng
 
-> **M1–M3 chạy local + HF Spaces; M4 mới deploy production. Không mở rộng scope ngoài 4 milestone.**
+> **M1–M3 chạy local + demo Render free; M4 mới deploy production. Không mở rộng scope ngoài 4 milestone.** (HF Spaces đã hết free cho Gradio từ 2026 — dùng Render)
 
-- **M1–M3 local + HF Spaces:** local để iterate nhanh (sửa 1 dòng → test ngay, không cần build image/push/wait deploy). HF Spaces dùng khi cần demo cho người khác xem trước M4 — deploy "demo-grade" chứ không phải production. Tách bạch hai thứ này để không mất thời gian lo TLS/nginx/uptime khi cái cần tối ưu là prompt và retrieval.
+- **M1–M3 local + demo Render free:** local để iterate nhanh (sửa 1 dòng → test ngay, không cần build image/push/wait deploy). Render dùng khi cần demo cho người khác xem trước M4 — deploy "demo-grade" chứ không phải production. Tách bạch hai thứ này để không mất thời gian lo TLS/nginx/uptime khi cái cần tối ưu là prompt và retrieval.
 - **M4 mới deploy production:** đúng 1 lần lo hạ tầng, khi code đã ổn. Xem [07-DEPLOYMENT](../07-DEPLOYMENT/README.md).
 - **Không mở rộng scope:** mọi ý tưởng tính năng mới trong M1–M4 → ghi backlog. Mục tiêu là **hoàn thành** 4 milestone, không phải "làm được nhiều nhất có thể". Chi tiết cách chống cám dỗ: rủi ro "quá ham tính năng mới" ở [06-acceptance-and-risks.md](06-acceptance-and-risks.md).
 

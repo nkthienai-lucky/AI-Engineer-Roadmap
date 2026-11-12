@@ -3,6 +3,12 @@
 > **Mục tiêu:** Hiểu model "nhìn" được ảnh + text — kiến trúc, cách dùng, cách deploy model nhẹ.
 > **Đầu ra:** App hỏi đáp ảnh (image captioning / VQA) chạy local + demo public.
 
+> ⚠️ **Lựa chọn deploy demo (2026):** HF Spaces **đã hết free cho Gradio/Docker** (chỉ còn Static Space). Render free (512MB RAM) **không đủ** chạy VLM 2–3GB — 2 lựa chọn thực tế:
+> 1. **Oracle VPS Always Free** (12GB RAM) — chạy SmolVLM2/Qwen2.5-VL-3B Q4 ngay trên VPS, theo [07-DEPLOYMENT](../07-DEPLOYMENT/README.md)
+> 2. **Render free + API VLM bên ngoài** (Ollama trên máy nhà / API thật) — web chỉ là UI mỏng
+>
+> ZeroGPU trên HF hiện chỉ dành cho tài khoản Pro.
+
 ---
 
 ## 🎓 Nội dung cần học
@@ -46,7 +52,7 @@
 1. Chạy local bằng `SmolVLM2-2.2B` (CPU OK) hoặc `Qwen2.5-VL-3B`
 2. Có UI Gradio upload ảnh
 3. So sánh chất lượng 2 model khác nhau (bảng đánh giá tay 20 ảnh)
-4. Deploy lên HF Spaces (ZeroGPU hoặc CPU)
+4. Deploy demo: **Oracle VPS** (model chạy trên VPS) hoặc **Render free** (UI mỏng gọi API VLM ngoài) — xem ghi chú đầu trang về HF Spaces
 
 **Tiêu chí hoàn thành (DoD):**
 - [ ] App chạy được với ảnh thật, latency chấp nhận được (< 15s/ảnh với CPU)
